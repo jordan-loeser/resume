@@ -4,11 +4,7 @@ import { ResumeSchema } from "@kurone-kito/jsonresume-types";
 import Balancer from "react-wrap-balancer";
 import { parseExperiences } from "./util/parseExperiences";
 import { TenureAtCompany } from "./types";
-import {
-  parseDateRange,
-  parseEndDate,
-  parseStartDate,
-} from "./util/parseDates";
+import { Position } from "./components/Position";
 
 function App() {
   const experiences = parseExperiences(resumeJson as ResumeSchema);
@@ -46,47 +42,39 @@ function App() {
             aliquip ex ea commodo consequat.
           </Balancer>
         </section>
-        <section id="left" className="col-span-3">
+        <section id="left" className="col-span-4">
           <section>
-            <h2 className="text-md mb-4">Experience</h2>
+            <h2 className="text-xs mb-6 text-gray-500">Work Experience</h2>
             {experiences.map((tenure: TenureAtCompany, i) => (
-              <article key={`tenure-${i}-${tenure.name}`} className="mb-6">
-                <h3 className="text-md font-bold">
-                  {tenure.name}{" "}
-                  <span className="text-gray-600">
-                    ({tenure.positions[0].location})
-                  </span>{" "}
-                  <span className="text-gray-400">
-                    {parseDateRange(
-                      tenure.positions[0].startDate,
-                      tenure.positions[0].endDate
-                    )}
-                  </span>
-                </h3>
-                {tenure.positions.map((position) => {
-                  const { position: jobTitle, summary } = position;
-                  return (
-                    <div key={`experience-${jobTitle}`} className="mb-4 ">
-                      <h4 className="text-md mb-1">
-                        {jobTitle}{" "}
-                        {tenure.positions.length > 1 && (
-                          <span className=" text-gray-500">
-                            {parseDateRange(
-                              position.startDate,
-                              position.endDate
-                            )}
-                          </span>
-                        )}
-                      </h4>
-                      {/* <h4 className="flex-1 text-sm leading-5">{company}</h4> */}
-                      {summary && (
-                        <p className="text-sm font-light leading-4">
-                          <Balancer>{summary}</Balancer>
-                        </p>
+              <article
+                key={`tenure-${i}-${tenure.name}`}
+                className="mb-6 grid grid-cols-4 gap-3"
+              >
+                <div className="col-span-1">
+                  <h3 className="text-lg font-bold">{tenure.name}</h3>
+                  {/* <h4 className="text-sm text-gray-400">
+                    {tenure.positions[0].location}
+                  </h4> */}
+                  {/* <h4>
+                    <span className="text-gray-600">
+                      ({tenure.positions[0].location})
+                    </span>{" "}
+                    <span className="text-gray-400">
+                      {parseDateRange(
+                        tenure.positions[0].startDate,
+                        tenure.positions[0].endDate
                       )}
-                    </div>
-                  );
-                })}
+                    </span>
+                  </h4> */}
+                </div>
+                <div className="col-span-3">
+                  {tenure.positions.map((position, j) => (
+                    <Position
+                      key={`experience-${j}-${position.position}`}
+                      position={position}
+                    />
+                  ))}
+                </div>
               </article>
             ))}
           </section>

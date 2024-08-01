@@ -21,7 +21,6 @@
 }
 
 header,
-#summary,
-h2 {
+#summary {
   display: none !important;
 }
