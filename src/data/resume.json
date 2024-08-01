@@ -75,7 +75,7 @@
   "volunteer": [
     {
       "organization": "Out for Undergrad",
-      "position": "Lead Programming Director, O4U Digital Conference",
+      "position": "Lead Programming Director",
       "startDate": "2023-12-31",
       "endDate": "",
       "highlights": [],
@@ -83,7 +83,7 @@
     },
     {
       "organization": "Out for Undergrad",
-      "position": "Programming Director, O4U Digital Conference",
+      "position": "Programming Director",
       "startDate": "2022-12-31",
       "endDate": "2023-12-31",
       "highlights": [],
@@ -91,20 +91,11 @@
     },
     {
       "organization": "Out for Undergrad",
-      "position": "Mentorship Director, Strategic Operations Team",
+      "position": "Mentorship Director",
       "startDate": "2021-12-31",
       "endDate": "2023-01-31",
       "highlights": [],
       "url": "https://www.linkedin.com/company/out-for-undergrad/"
-    },
-    {
-      "organization": "Out in Tech",
-      "position": "Digital Corps Engineer",
-      "startDate": "2021-03-31",
-      "endDate": "2021-03-31",
-      "summary": "Worked with a team of volunteers to build a website for the Life Building Awareness Initiative (LIBAI), a Nigeria-based organization that aims to reduce the impact of HIV and STIs within the LGBTQ+ community.",
-      "highlights": [],
-      "url": ""
     }
   ],
   "education": [

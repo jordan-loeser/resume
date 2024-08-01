@@ -1,5 +1,9 @@
-import { ResumeSchema } from "@kurone-kito/jsonresume-types";
-import { Position, TenureAtCompany } from "../types";
+import {
+  Position,
+  TenureAtCompany,
+  VolunteerPosition,
+  WorkPosition,
+} from "../types";
 
 /**
  *  Assumptions:
@@ -8,27 +12,33 @@ import { Position, TenureAtCompany } from "../types";
  * */
 
 export const parseExperiences = (
-  resumeJson: ResumeSchema
+  positions: Position[]
 ): Array<TenureAtCompany> => {
-  if (!resumeJson.work || resumeJson.work.length <= 0) return [];
+  if (positions.length <= 0) return [];
 
   const tenures: TenureAtCompany[] = [];
 
   let curTenure: TenureAtCompany = {
-    name: resumeJson.work[0].name!,
+    name:
+      (positions[0] as WorkPosition).name! ||
+      (positions[0] as VolunteerPosition).organization!,
     positions: [],
   };
 
   let i = 0;
-  while (i < resumeJson.work.length) {
+  while (i < positions.length) {
     // Assumption: title and company are always present
-    const curPosition: Position = resumeJson.work[i];
-    if (curPosition.name === curTenure.name) {
+    const curPosition: Position = positions[i];
+    const curName =
+      (curPosition as WorkPosition).name! ||
+      (curPosition as VolunteerPosition).organization!;
+
+    if (curName === curTenure.name) {
       curTenure.positions.push(curPosition);
     } else {
       tenures.push(curTenure);
       curTenure = {
-        name: curPosition.name!,
+        name: curName,
         positions: [curPosition],
       };
     }

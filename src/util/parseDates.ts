@@ -1,4 +1,3 @@
-import { Iso8601 } from "@kurone-kito/jsonresume-types";
 import { Position } from "../types";
 
 type Options = { showMonth?: boolean };

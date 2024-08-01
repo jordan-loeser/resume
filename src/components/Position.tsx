@@ -9,9 +9,9 @@ export const Position = ({ position }: { position: PositionType }) => {
     <div className="mb-4">
       <hgroup className="mb-1">
         <h4 className="text-md">{jobTitle}</h4>
-        <h5 className="text-xs text-gray-500">
-          {parseDateRange(position.startDate, position.endDate)} (
-          {position.location})
+        <h5 className="text-sm text-gray-500">
+          {parseDateRange(position.startDate, position.endDate)}{" "}
+          {"location" in position && <>({position.location})</>}
         </h5>
       </hgroup>
       {summary && (

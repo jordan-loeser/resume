@@ -2,13 +2,9 @@ import "./App.css";
 import resumeJson from "./data/resume.json";
 import { ResumeSchema } from "@kurone-kito/jsonresume-types";
 import Balancer from "react-wrap-balancer";
-import { parseExperiences } from "./util/parseExperiences";
-import { TenureAtCompany } from "./types";
-import { Position } from "./components/Position";
+import { Section } from "./components/Section";
 
 function App() {
-  const experiences = parseExperiences(resumeJson as ResumeSchema);
-
   return (
     <div className="w-screen h-screen flex justify-center bg-slate-100 ">
       <main
@@ -43,41 +39,14 @@ function App() {
           </Balancer>
         </section>
         <section id="left" className="col-span-4">
-          <section>
-            <h2 className="text-xs mb-6 text-gray-500">Work Experience</h2>
-            {experiences.map((tenure: TenureAtCompany, i) => (
-              <article
-                key={`tenure-${i}-${tenure.name}`}
-                className="mb-6 grid grid-cols-4 gap-3"
-              >
-                <div className="col-span-1">
-                  <h3 className="text-lg font-bold">{tenure.name}</h3>
-                  {/* <h4 className="text-sm text-gray-400">
-                    {tenure.positions[0].location}
-                  </h4> */}
-                  {/* <h4>
-                    <span className="text-gray-600">
-                      ({tenure.positions[0].location})
-                    </span>{" "}
-                    <span className="text-gray-400">
-                      {parseDateRange(
-                        tenure.positions[0].startDate,
-                        tenure.positions[0].endDate
-                      )}
-                    </span>
-                  </h4> */}
-                </div>
-                <div className="col-span-3">
-                  {tenure.positions.map((position, j) => (
-                    <Position
-                      key={`experience-${j}-${position.position}`}
-                      position={position}
-                    />
-                  ))}
-                </div>
-              </article>
-            ))}
-          </section>
+          <Section
+            title="Work Experience"
+            positions={(resumeJson as ResumeSchema).work!}
+          />
+          <Section
+            title="Volunteer"
+            positions={(resumeJson as ResumeSchema).volunteer!}
+          />
         </section>
       </main>
     </div>
