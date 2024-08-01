@@ -1,12 +1,16 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
-#page-container {
+#resume {
   width: 8.5in;
   height: 11in;
-  padding: 10px;
+}
+
+.debug header,
+.debug article,
+.debug footer {
+  border: 1px dashed blue;
+}
+
+.debug section {
+  border: 1px dashed red;
 }
 
 @media print {
@@ -16,8 +20,8 @@
   }
 }
 
-@media screen {
-  #page-container {
-    box-shadow: 0px 0px 10px 0px #333;
-  }
+header,
+#summary,
+h2 {
+  display: none !important;
 }

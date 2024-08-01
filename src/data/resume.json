@@ -1,0 +1,268 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Jordan Loeser",
+    "label": "Building for Growth at Spotify 🌱",
+    "image": "",
+    "email": "loeser.jordan@gmail.com",
+    "phone": "",
+    "url": "https://jordanloeser.com",
+    "summary": "",
+    "location": {
+      "countryCode": "US",
+      "address": "United States"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "jordan-loeser",
+        "url": "https://www.linkedin.com/in/jordan-loeser/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Spotify",
+      "position": "Engineer II",
+      "startDate": "2022-10-01",
+      "endDate": "",
+      "highlights": [],
+      "summary": "Lead pre-campaign and animation workstreams to deliver data stories for Wrapped 2023 on web.",
+      "url": "https://www.linkedin.com/company/spotify/",
+      "location": "New York"
+    },
+    {
+      "name": "Spotify",
+      "position": "Engineer I",
+      "startDate": "2021-09-30",
+      "endDate": "2022-09-30",
+      "highlights": [],
+      "summary": "Managed Wrapped 2021 and 2022 sharecard workstream, which was implemented in 32 languages across 106 markets, engaging over 120 million users.",
+      "url": "https://www.linkedin.com/company/spotify/",
+      "location": "New York"
+    },
+    {
+      "name": "Spotify",
+      "position": "Associate Engineer",
+      "startDate": "2020-06-30",
+      "endDate": "2021-09-30",
+      "highlights": [],
+      "summary": "Lead planning and development of teaser page for Wrapped 2020 campaign.",
+      "url": "https://www.linkedin.com/company/spotify/",
+      "location": "New York"
+    },
+    {
+      "name": "Snapchat",
+      "position": "Software Engineering Intern",
+      "startDate": "2019-06-30",
+      "endDate": "2019-08-31",
+      "highlights": [],
+      "summary": "Developed onboarding and account recovery features with the Growth team.",
+      "url": "https://www.linkedin.com/company/snap-inc-co/",
+      "location": "Los Angeles"
+    },
+    {
+      "name": "Disney",
+      "position": "Software Engineering Intern",
+      "startDate": "2018-06-30",
+      "endDate": "2018-08-31",
+      "highlights": [],
+      "summary": "Designed a continuous integration and deployment pipeline for a Tier 1 enterprise authentication service.",
+      "url": "https://www.linkedin.com/company/the-walt-disney-company/",
+      "location": "Seattle"
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Out for Undergrad",
+      "position": "Lead Programming Director, O4U Digital Conference",
+      "startDate": "2023-12-31",
+      "endDate": "",
+      "highlights": [],
+      "url": "https://www.linkedin.com/company/out-for-undergrad/"
+    },
+    {
+      "organization": "Out for Undergrad",
+      "position": "Programming Director, O4U Digital Conference",
+      "startDate": "2022-12-31",
+      "endDate": "2023-12-31",
+      "highlights": [],
+      "url": "https://www.linkedin.com/company/out-for-undergrad/"
+    },
+    {
+      "organization": "Out for Undergrad",
+      "position": "Mentorship Director, Strategic Operations Team",
+      "startDate": "2021-12-31",
+      "endDate": "2023-01-31",
+      "highlights": [],
+      "url": "https://www.linkedin.com/company/out-for-undergrad/"
+    },
+    {
+      "organization": "Out in Tech",
+      "position": "Digital Corps Engineer",
+      "startDate": "2021-03-31",
+      "endDate": "2021-03-31",
+      "summary": "Worked with a team of volunteers to build a website for the Life Building Awareness Initiative (LIBAI), a Nigeria-based organization that aims to reduce the impact of HIV and STIs within the LGBTQ+ community.",
+      "highlights": [],
+      "url": ""
+    }
+  ],
+  "education": [
+    {
+      "institution": "Purdue University",
+      "area": "Computer Engineering Honors",
+      "studyType": "Bachelor of Science - BSCmpE",
+      "startDate": "",
+      "endDate": "",
+      "score": "",
+      "courses": []
+    },
+    {
+      "institution": "Universidad Carlos III de Madrid",
+      "area": "Computer Engineering",
+      "studyType": "Bachelor's degree",
+      "startDate": "",
+      "endDate": "",
+      "score": "",
+      "courses": []
+    }
+  ],
+  "awards": [
+    {
+      "title": "Dean’s List & Semester Honors",
+      "date": "2019-01-31",
+      "awarder": "Mung Chiang, Dean of Engineering",
+      "summary": ""
+    },
+    {
+      "title": "Director of the Month",
+      "date": "2018-01-31",
+      "awarder": "Purdue Student Engineering Foundation",
+      "summary": "Awarded while serving as Technology Director during renovation of PSEF web presence."
+    },
+    {
+      "title": "Purdue IronHacks Open Data Hackathon Prize Winner",
+      "date": "2017-12-31",
+      "awarder": "Research Center for Open Digital Innovation",
+      "summary": "Created civic-minded web app using government data."
+    },
+    {
+      "title": "Outstanding First Year Ambassador",
+      "date": "2017-04-30",
+      "awarder": "Purdue University Honors College",
+      "summary": ""
+    },
+    {
+      "title": "Presidential Scholarship",
+      "date": "2016-08-31",
+      "awarder": null,
+      "summary": ""
+    },
+    {
+      "title": "AP Computer Science Student of the Year",
+      "date": "2016-05-31",
+      "awarder": null,
+      "summary": ""
+    },
+    {
+      "title": "AP Scholar with Distinction",
+      "date": "2014-05-31",
+      "awarder": "The College Board",
+      "summary": ""
+    }
+  ],
+  "certificates": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Public Speaking",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "C",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Python",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Project Management",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Purdue University",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Java",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "React.js",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Presentation Skills",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Git",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Leadership",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Teamwork",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "HTML5",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "JavaScript",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "CSS",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Kotlin",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Adobe Creative Suite",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "MATLAB",
+      "level": "",
+      "keywords": []
+    }
+  ],
+  "projects": [],
+  "meta": {
+    "version": "v1.0.0",
+    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
+  }
+}
