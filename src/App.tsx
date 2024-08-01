@@ -4,20 +4,24 @@ import { ResumeSchema } from "@kurone-kito/jsonresume-types";
 import Balancer from "react-wrap-balancer";
 import { parseExperiences } from "./util/parseExperiences";
 import { TenureAtCompany } from "./types";
-import { parseDateRange } from "./util/parseDateRange";
+import {
+  parseDateRange,
+  parseEndDate,
+  parseStartDate,
+} from "./util/parseDates";
 
 function App() {
   const experiences = parseExperiences(resumeJson as ResumeSchema);
 
   return (
-    <div className="w-screen h-screen flex justify-center bg-slate-100">
+    <div className="w-screen h-screen flex justify-center bg-slate-100 ">
       <main
         id="resume"
         className="grid grid-cols-6 gap-3 auto-rows-min bg-white p-6"
       >
         <header className="col-span-6 flex flex-row">
           <section>
-            <h1 className="text-6xl font-bold font-display">
+            <h1 className="text-6xl font-bold serlay">
               Jordan
               <br />
               Loeser
@@ -44,20 +48,35 @@ function App() {
         </section>
         <section id="left" className="col-span-3">
           <section>
-            <h2 className="text-lg mb-2">Experience</h2>
+            <h2 className="text-md mb-4">Experience</h2>
             {experiences.map((tenure: TenureAtCompany, i) => (
-              <article className="pb-2" key={`tenure-${i}-${tenure.name}`}>
-                <h3 className="text-md font-bold">{tenure.name}</h3>
+              <article key={`tenure-${i}-${tenure.name}`} className="mb-6">
+                <h3 className="text-md font-bold">
+                  {tenure.name}{" "}
+                  <span className="text-gray-600">
+                    ({tenure.positions[0].location})
+                  </span>{" "}
+                  <span className="text-gray-400">
+                    {parseDateRange(
+                      tenure.positions[0].startDate,
+                      tenure.positions[0].endDate
+                    )}
+                  </span>
+                </h3>
                 {tenure.positions.map((position) => {
                   const { position: jobTitle, summary } = position;
                   return (
-                    <div className="mb-2 " key={`experience-${jobTitle}`}>
-                      <h4 className="text-sm mb-1">
+                    <div key={`experience-${jobTitle}`} className="mb-4 ">
+                      <h4 className="text-md mb-1">
                         {jobTitle}{" "}
-                        <span className=" text-gray-500">
-                          ({parseDateRange(position)})
-                        </span>
-                        {/* ({location}) {parseDateRange(position)} */}
+                        {tenure.positions.length > 1 && (
+                          <span className=" text-gray-500">
+                            {parseDateRange(
+                              position.startDate,
+                              position.endDate
+                            )}
+                          </span>
+                        )}
                       </h4>
                       {/* <h4 className="flex-1 text-sm leading-5">{company}</h4> */}
                       {summary && (
