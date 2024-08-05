@@ -1,10 +1,26 @@
 import "./App.css";
 import resumeJson from "./data/resume.json";
-import { ResumeSchema } from "@kurone-kito/jsonresume-types";
 import Balancer from "react-wrap-balancer";
-import { Section } from "./components/Section";
+import { groupConsecutiveExperiences } from "./util/groupConsecutiveExperiences";
+import {
+  educationToExperience,
+  volunteerPositionToExperience,
+  workPositionToExperience,
+} from "./util/mapDataToExperience";
+import { GroupOfExperiences } from "./components/GroupOfExperiences";
+import { Experience } from "./components/Experience";
 
 function App() {
+  const workExperiences = groupConsecutiveExperiences(
+    resumeJson.work!.map(workPositionToExperience)
+  );
+
+  const volunteerExperiences = groupConsecutiveExperiences(
+    resumeJson.volunteer!.map(volunteerPositionToExperience)
+  );
+
+  const educationExperiences = resumeJson.education!.map(educationToExperience);
+
   return (
     <div className="w-screen h-screen flex justify-center bg-slate-100 ">
       <main
@@ -38,16 +54,37 @@ function App() {
             aliquip ex ea commodo consequat.
           </Balancer>
         </section>
-        <section id="left" className="col-span-4">
-          <Section
-            title="Work Experience"
-            positions={(resumeJson as ResumeSchema).work!}
-          />
-          <Section
-            title="Volunteer"
-            positions={(resumeJson as ResumeSchema).volunteer!}
-          />
+        <section id="work" className="col-start-3 col-span-4">
+          <h2 className="text-xs mb-6 text-gray-500">Work Experience</h2>
+          {workExperiences.map((group, i) => (
+            <GroupOfExperiences
+              key={`group-${i}-${group.entity}`}
+              group={group}
+            />
+          ))}
         </section>
+        <section id="volunteer" className="col-start-3 col-span-4">
+          <h2 className="text-xs mb-6 text-gray-500">Volunteer</h2>
+          {volunteerExperiences.map((group, i) => (
+            <GroupOfExperiences
+              key={`group-${i}-${group.entity}`}
+              group={group}
+            />
+          ))}
+        </section>
+        <div id="right" className="col-span-2 row-start-1 ">
+          <h2 className="text-xs mb-6 text-gray-500">Education</h2>
+          {educationExperiences.map((experience, i) => (
+            <Experience
+              key={`experience-${i}-${experience.title}`}
+              experience={experience}
+            />
+          ))}
+          {/* <EducationSection
+            title="Education"
+            experiences={(resumeJson as ResumeSchema).education!}
+          /> */}
+        </div>
       </main>
     </div>
   );

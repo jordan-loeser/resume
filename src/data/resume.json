@@ -101,19 +101,19 @@
   "education": [
     {
       "institution": "Purdue University",
-      "area": "Computer Engineering Honors",
-      "studyType": "Bachelor of Science - BSCmpE",
-      "startDate": "",
-      "endDate": "",
+      "area": "Computer Engineering with Honors",
+      "studyType": "",
+      "startDate": "2016-08-01",
+      "endDate": "2020-05-01",
       "score": "",
       "courses": []
     },
     {
       "institution": "Universidad Carlos III de Madrid",
-      "area": "Computer Engineering",
-      "studyType": "Bachelor's degree",
-      "startDate": "",
-      "endDate": "",
+      "area": "",
+      "studyType": "Study Abroad",
+      "startDate": "2019-01-01",
+      "endDate": "2019-06-01",
       "score": "",
       "courses": []
     }

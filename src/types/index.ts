@@ -9,9 +9,23 @@ export type VolunteerPosition = ArrayElement<
   Required<ResumeSchema>["volunteer"]
 >;
 
-export type Position = WorkPosition | VolunteerPosition;
+export type EducationalExperience = ArrayElement<
+  Required<ResumeSchema>["education"]
+>;
 
-export type TenureAtCompany = {
-  name: string;
-  positions: Position[];
+export type Position = WorkPosition | VolunteerPosition | EducationalExperience;
+
+export type Experience = {
+  entity: string;
+  title: string;
+  subtitle?: string;
+  startDate?: string;
+  endDate?: string;
+  summary?: string;
+  location?: string;
+};
+
+export type GroupOfExperiences = {
+  entity: string;
+  experiences: Experience[];
 };
