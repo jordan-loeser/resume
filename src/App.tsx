@@ -1,26 +1,21 @@
 import "./App.css";
 import resumeJson from "./data/resume.json";
-import Balancer from "react-wrap-balancer";
-import { groupConsecutiveExperiences } from "./util/groupConsecutiveExperiences";
-import {
-  educationToExperience,
-  volunteerPositionToExperience,
-  workPositionToExperience,
-} from "./util/mapDataToExperience";
-import { GroupOfExperiences } from "./components/GroupOfExperiences";
-import { Experience } from "./components/Experience";
-import { ComponentViewer } from "./components/ComponentViewer";
+import { groupConsecutivePositionsByKey } from "./util/groupConsecutiveExperiences";
+import { VolunteerPosition, WorkPosition } from "./types";
+import { SectionHeader, ContentWithSideHeader } from "./bits";
+import { WorkBlock, VolunteerBlock, EducationBlock } from "./components";
 
 function App() {
-  const workExperiences = groupConsecutiveExperiences(
-    resumeJson.work!.map(workPositionToExperience)
+  const groupedWorkExperiences = groupConsecutivePositionsByKey<WorkPosition>(
+    resumeJson.work!,
+    "name"
   );
 
-  const volunteerExperiences = groupConsecutiveExperiences(
-    resumeJson.volunteer!.map(volunteerPositionToExperience)
-  );
-
-  const educationExperiences = resumeJson.education!.map(educationToExperience);
+  const groupedVolunteerExperiences =
+    groupConsecutivePositionsByKey<VolunteerPosition>(
+      resumeJson.volunteer!,
+      "organization"
+    );
 
   return (
     <div
@@ -31,13 +26,9 @@ function App() {
         id="resume"
         className="page:w-[8.5in] page:h-[11in] sm:grid grid-cols-6 gap-3 auto-rows-min bg-white p-6"
       >
-        <header className="col-span-6 flex flex-row">
+        <header className="col-span-6 flex flex-row mb-10">
           <section>
-            <h1 className="text-6xl font-bold serlay">
-              Jordan
-              <br />
-              Loeser
-            </h1>
+            <h1 className="text-6xl font-bold serlay">Jordan Loeser</h1>
           </section>
           <section className="flex-1 text-right text-gray-400  text-xs font-display">
             <p>
@@ -50,44 +41,46 @@ function App() {
             </p>
           </section>
         </header>
-        <section id="summary" className="col-span-full text-md mb-3">
-          <Balancer ratio={0.25}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </Balancer>
-        </section>
-        <section id="work" className="col-start-3 col-span-4">
-          <h2 className="text-xs mb-4 text-gray-500">Work Experience</h2>
-          {workExperiences.map((group, i) => (
-            <GroupOfExperiences
-              key={`group-${i}-${group.entity}`}
-              group={group}
-            />
+        <section id="work" className="col-span-4">
+          <SectionHeader>Work Experience</SectionHeader>
+          {groupedWorkExperiences.map((group, i) => (
+            <ContentWithSideHeader
+              key={`work-${i}-${group[0].name}`}
+              title={group[0].name}
+            >
+              {group.map((position) => (
+                <WorkBlock
+                  key={`position-${position.name}-${position.position}`}
+                  position={position}
+                />
+              ))}
+            </ContentWithSideHeader>
           ))}
         </section>
-        <section id="volunteer" className="col-start-3 col-span-4">
-          <h2 className="text-xs mb-4 text-gray-500">Volunteer</h2>
-          {volunteerExperiences.map((group, i) => (
-            <GroupOfExperiences
-              key={`group-${i}-${group.entity}`}
-              group={group}
-            />
+        <section id="volunteer" className="col-span-4">
+          <SectionHeader>Volunteer</SectionHeader>
+          {groupedVolunteerExperiences.map((group, i) => (
+            <ContentWithSideHeader
+              key={`volunteer-${i}-${group[0].organization}`}
+              title={group[0].organization}
+            >
+              {group.map((position) => (
+                <VolunteerBlock
+                  key={`position-${position.organization}-${position.position}`}
+                  position={position}
+                />
+              ))}
+            </ContentWithSideHeader>
           ))}
         </section>
-        <section id="education" className="col-span-2 row-start-1 ">
-          <h2 className="text-xs mb-4 text-gray-500">Education</h2>
-          {educationExperiences.map((experience, i) => (
-            <Experience
-              key={`experience-${i}-${experience.title}`}
+        <section id="education" className="row-start-2 col-start-5 col-span-2">
+          <SectionHeader>Education</SectionHeader>
+          {resumeJson.education.map((experience) => (
+            <EducationBlock
+              key={`education-${experience.institution}-${experience.area}`}
               experience={experience}
             />
           ))}
-          {/* <EducationSection
-            title="Education"
-            experiences={(resumeJson as ResumeSchema).education!}
-          /> */}
         </section>
       </main>
     </div>

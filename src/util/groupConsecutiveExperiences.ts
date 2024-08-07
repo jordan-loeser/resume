@@ -1,40 +1,32 @@
-import { GroupOfExperiences, Experience } from "../types";
-
 /**
  *  Assumptions:
  * - All experiences at the same company are adjascent
  * - Experiences.work are sorted by date
  * */
 
-export const groupConsecutiveExperiences = (
-  experiences: Experience[]
-): Array<GroupOfExperiences> => {
-  if (experiences.length <= 0) return [];
+export function groupConsecutivePositionsByKey<T>(
+  positions: T[],
+  key: keyof T
+): Array<T[]> {
+  if (positions.length <= 0) return [];
 
-  const groups: GroupOfExperiences[] = [];
+  const groups: T[][] = [];
 
-  let curGroup: GroupOfExperiences = {
-    entity: experiences[0].entity!,
-    experiences: [],
-  };
-
-  let i = 0;
-  while (i < experiences.length) {
-    const curExperience = experiences[i];
-    if (curExperience.entity === curGroup.entity) {
+  let i = 1;
+  let curGroup: T[] = [positions[0]];
+  while (i < positions.length) {
+    const curExperience = positions[i];
+    if (curExperience[key] === curGroup[0][key]) {
       // Continue previous group
-      curGroup.experiences.push(curExperience);
+      curGroup.push(curExperience);
     } else {
       // Start a new group
       groups.push(curGroup);
-      curGroup = {
-        entity: curExperience.entity,
-        experiences: [curExperience],
-      };
+      curGroup = [curExperience];
     }
     i += 1;
   }
   groups.push(curGroup);
 
   return groups;
-};
+}

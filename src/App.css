@@ -14,8 +14,3 @@
     margin: 0;
   }
 }
-
-header,
-#summary {
-  display: none !important;
-}
