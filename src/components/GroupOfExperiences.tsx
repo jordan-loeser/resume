@@ -15,7 +15,7 @@ export const GroupOfExperiences = ({
           <h3 className="text-sm font-bold leading-5">{group.entity}</h3>
         </div>
       )}
-      <div className={`col-span-${hasEntity ? "3" : "full"}`}>
+      <div className={hasEntity ? "col-span-3" : "col-span-full"}>
         {group.experiences.map((experience, i) => (
           <Experience
             key={`experience-${i}-${experience.title}`}

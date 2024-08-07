@@ -9,6 +9,7 @@ import {
 } from "./util/mapDataToExperience";
 import { GroupOfExperiences } from "./components/GroupOfExperiences";
 import { Experience } from "./components/Experience";
+import { ComponentViewer } from "./components/ComponentViewer";
 
 function App() {
   const workExperiences = groupConsecutiveExperiences(
@@ -22,10 +23,13 @@ function App() {
   const educationExperiences = resumeJson.education!.map(educationToExperience);
 
   return (
-    <div className="w-screen h-screen flex justify-center bg-slate-100 ">
+    <div
+      id="stage"
+      className="bg-slate-100 page:flex page:justify-center page:py-8"
+    >
       <main
         id="resume"
-        className="grid grid-cols-6 gap-3 auto-rows-min bg-white p-6"
+        className="page:w-[8.5in] page:h-[11in] sm:grid grid-cols-6 gap-3 auto-rows-min bg-white p-6"
       >
         <header className="col-span-6 flex flex-row">
           <section>
@@ -55,7 +59,7 @@ function App() {
           </Balancer>
         </section>
         <section id="work" className="col-start-3 col-span-4">
-          <h2 className="text-xs mb-6 text-gray-500">Work Experience</h2>
+          <h2 className="text-xs mb-4 text-gray-500">Work Experience</h2>
           {workExperiences.map((group, i) => (
             <GroupOfExperiences
               key={`group-${i}-${group.entity}`}
@@ -64,7 +68,7 @@ function App() {
           ))}
         </section>
         <section id="volunteer" className="col-start-3 col-span-4">
-          <h2 className="text-xs mb-6 text-gray-500">Volunteer</h2>
+          <h2 className="text-xs mb-4 text-gray-500">Volunteer</h2>
           {volunteerExperiences.map((group, i) => (
             <GroupOfExperiences
               key={`group-${i}-${group.entity}`}
@@ -72,8 +76,8 @@ function App() {
             />
           ))}
         </section>
-        <div id="right" className="col-span-2 row-start-1 ">
-          <h2 className="text-xs mb-6 text-gray-500">Education</h2>
+        <section id="education" className="col-span-2 row-start-1 ">
+          <h2 className="text-xs mb-4 text-gray-500">Education</h2>
           {educationExperiences.map((experience, i) => (
             <Experience
               key={`experience-${i}-${experience.title}`}
@@ -84,7 +88,7 @@ function App() {
             title="Education"
             experiences={(resumeJson as ResumeSchema).education!}
           /> */}
-        </div>
+        </section>
       </main>
     </div>
   );

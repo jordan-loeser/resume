@@ -8,9 +8,9 @@ export const Experience = ({ experience }: { experience: ExperienceType }) => {
       <hgroup className="mb-1">
         <h4 className="text-md">{experience.title}</h4>
         {experience.subtitle && (
-          <Balancer>
-            <h5 className="text-sm text-gray-500">{experience.subtitle}</h5>
-          </Balancer>
+          <h5 className="text-sm text-gray-500">
+            <Balancer>{experience.subtitle}</Balancer>
+          </h5>
         )}
         <h5 className="text-sm text-gray-500">
           {parseDateRange(experience.startDate, experience.endDate)}
