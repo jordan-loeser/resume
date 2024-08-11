@@ -1,22 +1,21 @@
 import "./App.css";
 import resumeJson from "./data/resume.json";
 import { groupConsecutivePositionsByKey } from "./util/groupConsecutiveExperiences";
-import { VolunteerPosition, WorkPosition } from "./types";
+import { Work, Volunteer } from "./types";
 import { SectionHeader, GroupedContentWithTitle } from "./bits";
 import { WorkBlock, VolunteerBlock, EducationBlock } from "./components";
 import Balancer from "react-wrap-balancer";
 
 function App() {
-  const groupedWorkExperiences = groupConsecutivePositionsByKey<WorkPosition>(
+  const groupedWorkExperiences = groupConsecutivePositionsByKey<Work>(
     resumeJson.work!,
     "name"
   );
 
-  const groupedVolunteerExperiences =
-    groupConsecutivePositionsByKey<VolunteerPosition>(
-      resumeJson.volunteer!,
-      "organization"
-    );
+  const groupedVolunteerExperiences = groupConsecutivePositionsByKey<Volunteer>(
+    resumeJson.volunteer!,
+    "organization"
+  );
 
   return (
     <div
@@ -106,7 +105,7 @@ function App() {
             </section>
           </div>
         </section>
-        <footer className="py-4 mt-4 page:mt-0 page:py-0">
+        <footer className="py-4 mt-4 sm:mt-0 page:py-0">
           <p className="text-gray-400 text-xs text-center page:text-right">
             This resume was built using React, Vite, and Tailwind.
           </p>

@@ -1,18 +1,14 @@
 import { ContentBlock } from "../bits/ContentBlock";
-import { VolunteerPosition } from "../types";
+import { Volunteer } from "../types";
 import { parseDateRange } from "../util/parseDates";
 
-const getSubtitle = (position: VolunteerPosition) => {
+const getSubtitle = (position: Volunteer) => {
   const dateRange = parseDateRange(position.startDate, position.endDate);
   if (!position.location) return dateRange;
   return `${dateRange} (${position.location})`;
 };
 
-export const VolunteerBlock = ({
-  position,
-}: {
-  position: VolunteerPosition;
-}) => {
+export const VolunteerBlock = ({ position }: { position: Volunteer }) => {
   return (
     <ContentBlock
       title={position.position}
