@@ -13,7 +13,7 @@ export const EducationBlock = ({ experience }: { experience: Education }) => {
     <ContentBlock
       title={experience.institution}
       subtitle={getSubtitle(experience)}
-      subtitle2={parseDateRange(experience.startDate, experience.endDate)}
+      smallBody={parseDateRange(experience.startDate, experience.endDate)}
     />
   );
 };

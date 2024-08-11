@@ -74,6 +74,7 @@
   "volunteer": [
     {
       "organization": "Out for Undergrad",
+      "summary": "Orchestrating fully-funded professional development conference experiences for 350+ LGBTQ+ undergraduates.",
       "position": "Lead Programming Director",
       "startDate": "2023-12-31",
       "endDate": "",
@@ -83,16 +84,8 @@
     {
       "organization": "Out for Undergrad",
       "position": "Programming Director",
-      "startDate": "2022-12-31",
-      "endDate": "2023-12-31",
-      "highlights": [],
-      "url": "https://www.linkedin.com/company/out-for-undergrad/"
-    },
-    {
-      "organization": "Out for Undergrad",
-      "position": "Mentorship Director",
       "startDate": "2021-12-31",
-      "endDate": "2023-01-31",
+      "endDate": "2023-12-31",
       "highlights": [],
       "url": "https://www.linkedin.com/company/out-for-undergrad/"
     }
@@ -117,50 +110,7 @@
       "courses": []
     }
   ],
-  "awards": [
-    {
-      "title": "Dean’s List & Semester Honors",
-      "date": "2019-01-31",
-      "awarder": "Mung Chiang, Dean of Engineering",
-      "summary": ""
-    },
-    {
-      "title": "Director of the Month",
-      "date": "2018-01-31",
-      "awarder": "Purdue Student Engineering Foundation",
-      "summary": "Awarded while serving as Technology Director during renovation of PSEF web presence."
-    },
-    {
-      "title": "Purdue IronHacks Open Data Hackathon Prize Winner",
-      "date": "2017-12-31",
-      "awarder": "Research Center for Open Digital Innovation",
-      "summary": "Created civic-minded web app using government data."
-    },
-    {
-      "title": "Outstanding First Year Ambassador",
-      "date": "2017-04-30",
-      "awarder": "Purdue University Honors College",
-      "summary": ""
-    },
-    {
-      "title": "Presidential Scholarship",
-      "date": "2016-08-31",
-      "awarder": null,
-      "summary": ""
-    },
-    {
-      "title": "AP Computer Science Student of the Year",
-      "date": "2016-05-31",
-      "awarder": null,
-      "summary": ""
-    },
-    {
-      "title": "AP Scholar with Distinction",
-      "date": "2014-05-31",
-      "awarder": "The College Board",
-      "summary": ""
-    }
-  ],
+  "awards": [],
   "certificates": [],
   "publications": [],
   "skills": [

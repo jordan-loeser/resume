@@ -5,6 +5,7 @@ type ContentBlockProps = {
   subtitle?: string;
   subtitle2?: string;
   body?: string;
+  smallBody?: string;
   useBalancer?: boolean;
 };
 
@@ -23,6 +24,7 @@ export const ContentBlock = ({
   subtitle,
   subtitle2,
   body,
+  smallBody,
   useBalancer = true,
 }: ContentBlockProps) => (
   <div className="mb-2">
@@ -52,6 +54,13 @@ export const ContentBlock = ({
     {body && (
       <p className="text-sm font-light">
         <ConditionalBalancer balance={useBalancer}>{body}</ConditionalBalancer>
+      </p>
+    )}
+    {smallBody && (
+      <p className="text-xs font-light">
+        <ConditionalBalancer balance={useBalancer}>
+          {smallBody}
+        </ConditionalBalancer>
       </p>
     )}
   </div>

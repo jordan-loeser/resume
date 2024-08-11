@@ -13,7 +13,7 @@ export const VolunteerBlock = ({ position }: { position: Volunteer }) => {
     <ContentBlock
       title={position.position}
       subtitle={getSubtitle(position)}
-      body={position.summary}
+      smallBody={position.summary}
     />
   );
 };
