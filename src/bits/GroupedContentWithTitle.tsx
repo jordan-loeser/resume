@@ -13,8 +13,15 @@ export const GroupedContentWithTitle = ({
   children,
 }: GroupedContentWithTitleProps) => {
   const isTop = titlePosition === "top";
+  const baseContainerStyle = "mb-4 sm:mb-2";
   return (
-    <article className={isTop ? "mb-2" : "mb-2 grid grid-cols-4 gap-3"}>
+    <article
+      className={
+        isTop
+          ? baseContainerStyle
+          : `${baseContainerStyle} sm:grid grid-cols-4 gap-3`
+      }
+    >
       <div className="col-span-1">
         <h3 className="font-display text-md font-bold mb-1">
           <Balancer>{title}</Balancer>
