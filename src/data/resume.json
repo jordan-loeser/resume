@@ -165,89 +165,89 @@
   "publications": [],
   "skills": [
     {
-      "name": "Public Speaking",
+      "name": "HTML",
       "level": "",
-      "keywords": []
-    },
-    {
-      "name": "C",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Python",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Project Management",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Purdue University",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Java",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "React.js",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Presentation Skills",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Git",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Leadership",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Teamwork",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "HTML5",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "JavaScript",
-      "level": "",
-      "keywords": []
+      "keywords": ["Languages"]
     },
     {
       "name": "CSS",
       "level": "",
-      "keywords": []
+      "keywords": ["Languages"]
     },
     {
-      "name": "Kotlin",
+      "name": "Javascript",
       "level": "",
-      "keywords": []
+      "keywords": ["Languages"]
     },
     {
-      "name": "Adobe Creative Suite",
+      "name": "Typescript",
       "level": "",
-      "keywords": []
+      "keywords": ["Languages"]
     },
     {
-      "name": "MATLAB",
+      "name": "Python",
       "level": "",
-      "keywords": []
+      "keywords": ["Languages"]
+    },
+    {
+      "name": "Java",
+      "level": "",
+      "keywords": ["Languages"]
+    },
+    {
+      "name": "C",
+      "level": "",
+      "keywords": ["Languages"]
+    },
+    {
+      "name": "React",
+      "level": "",
+      "keywords": ["Frameworks"]
+    },
+    {
+      "name": "Next.js",
+      "level": "",
+      "keywords": ["Frameworks"]
+    },
+    {
+      "name": "Three.js",
+      "level": "",
+      "keywords": ["Frameworks"]
+    },
+    {
+      "name": "React Native",
+      "level": "",
+      "keywords": ["Frameworks"]
+    },
+    {
+      "name": "Figma",
+      "level": "",
+      "keywords": ["Design"]
+    },
+    {
+      "name": "Adobe Suite",
+      "level": "",
+      "keywords": ["Design"]
+    },
+    {
+      "name": "CAD",
+      "level": "",
+      "keywords": ["Design"]
+    },
+    {
+      "name": "Vite",
+      "level": "",
+      "keywords": ["Frameworks"]
+    },
+    {
+      "name": "Firebase",
+      "level": "",
+      "keywords": ["Frameworks"]
+    },
+    {
+      "name": "Turbo",
+      "level": "",
+      "keywords": ["Frameworks"]
     }
   ],
   "projects": [],

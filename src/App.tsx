@@ -5,6 +5,8 @@ import { Work, Volunteer } from "./types";
 import { SectionHeader, GroupedContentWithTitle } from "./bits";
 import { WorkBlock, VolunteerBlock, EducationBlock } from "./components";
 import Balancer from "react-wrap-balancer";
+import { groupSkillsByFirstKeyword } from "./util/groupSkillsByFirstKeyword";
+import { SkillsBlock } from "./components/SkillBlock";
 
 function App() {
   const groupedWorkExperiences = groupConsecutivePositionsByKey<Work>(
@@ -16,6 +18,8 @@ function App() {
     resumeJson.volunteer!,
     "organization"
   );
+
+  const groupedSkills = groupSkillsByFirstKeyword(resumeJson.skills!);
 
   return (
     <div
@@ -75,10 +79,7 @@ function App() {
             </section>
           </div>
           <div id="col-right" className="col-start-5 col-span-2">
-            <section
-              id="education"
-              className="row-start-2 col-start-5 col-span-2 mb-6"
-            >
+            <section id="education" className="mb-6">
               <SectionHeader>Education</SectionHeader>
               {resumeJson.education.map((experience) => (
                 <EducationBlock
@@ -87,7 +88,7 @@ function App() {
                 />
               ))}
             </section>
-            <section id="volunteer">
+            <section id="volunteer" className="mb-6">
               <SectionHeader>Community Leadership</SectionHeader>
               {groupedVolunteerExperiences.map((group, i) => (
                 <GroupedContentWithTitle
@@ -101,6 +102,16 @@ function App() {
                     />
                   ))}
                 </GroupedContentWithTitle>
+              ))}
+            </section>
+            <section id="skills">
+              <SectionHeader>Skills</SectionHeader>
+              {Object.entries(groupedSkills).map(([keyword, skills], i) => (
+                <SkillsBlock
+                  key={`skills-${i}-${keyword}`}
+                  keyword={keyword}
+                  skills={skills}
+                />
               ))}
             </section>
           </div>
