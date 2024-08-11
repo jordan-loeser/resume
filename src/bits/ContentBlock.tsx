@@ -16,7 +16,7 @@ export const ContentBlock = ({
   <div className="mb-2">
     <hgroup className="mb-1">
       {title && (
-        <h4 className="text-md">
+        <h4 className="text-sm font-bold">
           <Balancer>{title}</Balancer>
         </h4>
       )}
@@ -26,13 +26,13 @@ export const ContentBlock = ({
         </h5>
       )}
       {subtitle2 && (
-        <h5 className="text-sm text-gray-500">
+        <h6 className="text-sm text-gray-500">
           <Balancer>{subtitle2}</Balancer>
-        </h5>
+        </h6>
       )}
     </hgroup>
     {body && (
-      <p className="text-sm font-light leading-4 mb-4">
+      <p className="text-sm font-light">
         <Balancer>{body}</Balancer>
       </p>
     )}

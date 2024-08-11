@@ -2,10 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Jordan Loeser",
-    "label": "Building for Growth at Spotify 🌱",
+    "label": "Currently a Software Engineer at Spotify.",
     "image": "",
     "email": "loeser.jordan@gmail.com",
-    "phone": "",
+    "phone": "317.442.2537",
     "url": "https://jordanloeser.com",
     "summary": "",
     "location": {
@@ -27,7 +27,7 @@
       "startDate": "2022-10-01",
       "endDate": "",
       "highlights": [],
-      "summary": "Lead pre-campaign and animation workstreams to deliver data stories for Wrapped 2023 on web.",
+      "summary": "Led animation workstream for the Wrapped 2023 web experience. Project-managed Heardle, Spotify's first gaming aquisition.",
       "url": "https://www.linkedin.com/company/spotify/",
       "location": "New York"
     },
@@ -36,8 +36,7 @@
       "position": "Engineer I",
       "startDate": "2021-09-30",
       "endDate": "2022-09-30",
-      "highlights": [],
-      "summary": "Managed Wrapped 2021 and 2022 sharecard workstreams, which were implemented in 32 languages across 106 markets, engaging over 120 million users.",
+      "summary": "Tech-led Wrapped 2021 and 2022 sharecard workstreams, which were implemented in 30+ languages across 100+ markets, engaging over 120 million users each year.",
       "url": "https://www.linkedin.com/company/spotify/",
       "location": "New York"
     },
@@ -47,7 +46,7 @@
       "startDate": "2020-06-30",
       "endDate": "2021-09-30",
       "highlights": [],
-      "summary": "Lead planning and development of teaser page for Wrapped 2020 campaign.",
+      "summary": "Led planning and development of teaser page for Wrapped 2020 campaign.",
       "url": "https://www.linkedin.com/company/spotify/",
       "location": "New York"
     },
@@ -67,7 +66,7 @@
       "startDate": "2018-06-30",
       "endDate": "2018-08-31",
       "highlights": [],
-      "summary": "Designed a continuous integration and deployment pipeline for a Tier 1 enterprise authentication service.",
+      "summary": "Designed a CI pipeline for an enterprise authentication service.",
       "url": "https://www.linkedin.com/company/the-walt-disney-company/",
       "location": "Seattle"
     }
