@@ -24,7 +24,7 @@ function App() {
   return (
     <div
       id="stage"
-      className="bg-slate-100 page:flex page:justify-center page:py-8"
+      className="bg-slate-100 page:flex page:justify-center page:py-8 print:p-0"
     >
       <main
         id="resume"
@@ -36,19 +36,6 @@ function App() {
               <h1 className="text-4xl font-bold font-display">
                 {resumeJson.basics.name}
               </h1>
-            </section>
-            <section className="mt-2 sm:mt-0 flex-1 sm:text-right text-gray-400 text-xs font-display">
-              <p>
-                <a href={resumeJson.basics.url}>
-                  {resumeJson.basics.url.replace(/https?:\/\//i, "")}
-                </a>
-              </p>
-              <p>
-                <a href={`mailto:${resumeJson.basics.email}`}>
-                  {resumeJson.basics.email}
-                </a>
-              </p>
-              <p>{resumeJson.basics.phone}</p>
             </section>
           </div>
           <h2 className="text-xl my-6">
@@ -116,10 +103,28 @@ function App() {
             </section>
           </div>
         </section>
-        <footer className="py-4 mt-4 sm:mt-0 page:py-0">
-          <p className="text-gray-400 text-xs text-center page:text-right">
-            This resume was built using React, Vite, and Tailwind.
-          </p>
+        <footer className="py-4 mt-4 sm:mt-0 page:py-0 sm:flex flex-row items-end">
+          <section className="mt-2 sm:mt-0 flex-1 sm:text-left text-gray-400 text-xs font-display">
+            <p>
+              <a href={resumeJson.basics.url}>
+                {resumeJson.basics.url.replace(/https?:\/\//i, "")}
+              </a>
+            </p>
+            <p>
+              <a href={`mailto:${resumeJson.basics.email}`}>
+                {resumeJson.basics.email}
+              </a>
+            </p>
+            <p>{resumeJson.basics.phone}</p>
+          </section>
+          <section className="text-gray-400 text-xs text-center page:text-right">
+            <p>Built using React, Vite, and Tailwind</p>
+            <p>
+              <a href="https://resume.jordanloeser.com">
+                resume.jordanloeser.com
+              </a>
+            </p>
+          </section>
         </footer>
       </main>
     </div>

@@ -11,6 +11,8 @@ export default {
       display: ["Young Serif", ...defaultTheme.fontFamily.serif],
       // },
       screens: {
+        print: { raw: "print" },
+        screen: { raw: "screen" },
         page: "8.5in",
       },
     },
