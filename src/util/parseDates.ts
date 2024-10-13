@@ -1,4 +1,4 @@
-import { Position } from "../types";
+import { Iso8601 } from "@kurone-kito/jsonresume-types";
 
 type Options = { showMonth?: boolean };
 
@@ -10,7 +10,7 @@ const getDateTimeFormatOptions = (
 });
 
 export const parseStartDate = (
-  date: Position["startDate"],
+  date: Iso8601 | undefined,
   options: Options = {}
 ): string => {
   if (!date) return "";
@@ -22,7 +22,7 @@ export const parseStartDate = (
 };
 
 export const parseEndDate = (
-  date: Position["endDate"],
+  date: Iso8601 | undefined,
   options: Options = {}
 ): string => {
   if (!date) return "Present";
@@ -31,8 +31,8 @@ export const parseEndDate = (
 };
 
 export const parseDateRange = (
-  startDate: Position["startDate"],
-  endDate: Position["endDate"],
+  startDate: Iso8601 | undefined,
+  endDate: Iso8601 | undefined,
   options: Options = {}
 ): string => {
   const parsedStart = parseStartDate(startDate, options);
