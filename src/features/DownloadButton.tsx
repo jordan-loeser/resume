@@ -5,6 +5,6 @@ export const DownloadButton = () => (
   <Button
     icon={<DownloadIcon />}
     description="Download PDF"
-    onClick={() => window.print()}
+    onClick={() => window.open("/Jordan_Loeser_Resume.pdf", "_self")}
   />
 );
