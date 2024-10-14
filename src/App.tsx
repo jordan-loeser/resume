@@ -2,13 +2,13 @@ import "./App.css";
 import resumeJson from "./data/resume.json";
 import { groupConsecutivePositionsByKey } from "./util/groupConsecutiveExperiences";
 import { Work, Volunteer } from "./types";
-import { SectionHeader, GroupedContentWithTitle } from "./bits";
+import { SectionHeader, GroupedContentWithTitle } from "./components";
 import { WorkBlock, VolunteerBlock, EducationBlock } from "./features";
 import Balancer from "react-wrap-balancer";
 import { groupSkillsByFirstKeyword } from "./util/groupSkillsByFirstKeyword";
 import { SkillsBlock } from "./features/SkillBlock";
-import { GitHubButton } from "./bits/GitHubButton";
-import { DownloadButton } from "./bits/DownloadButton";
+import { GitHubButton } from "./components/GitHubButton";
+import { DownloadButton } from "./components/DownloadButton";
 
 function App() {
   const groupedWorkExperiences = groupConsecutivePositionsByKey<Work>(
