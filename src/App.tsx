@@ -30,7 +30,7 @@ function App() {
   return (
     <div
       id="stage"
-      className="bg-tan page:flex page:justify-center page:py-8 print:p-0"
+      className="bg-white page:flex page:justify-center page:py-8 print:p-0"
     >
       <main
         id="resume"
