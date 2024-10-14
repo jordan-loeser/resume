@@ -7,6 +7,8 @@ import { WorkBlock, VolunteerBlock, EducationBlock } from "./components";
 import Balancer from "react-wrap-balancer";
 import { groupSkillsByFirstKeyword } from "./util/groupSkillsByFirstKeyword";
 import { SkillsBlock } from "./components/SkillBlock";
+import { GitHubButton } from "./bits/GitHubButton";
+import { DownloadButton } from "./bits/DownloadButton";
 
 function App() {
   const groupedWorkExperiences = groupConsecutivePositionsByKey<Work>(
@@ -24,8 +26,15 @@ function App() {
   return (
     <div
       id="stage"
-      className="page:flex page:justify-center page:py-8 print:p-0 bg-stage"
+      className="page:flex page:justify-center page:py-16 print:p-0 bg-stage"
     >
+      <div
+        id="toolbar"
+        className="print:hidden fixed z-10 bottom-0 page:top-0 right-0 p-4"
+      >
+        <GitHubButton />
+        <DownloadButton />
+      </div>
       <main
         id="resume"
         className="page:w-[8.5in] page:h-[11in] p-8 sm:p-16 flex-col page:flex screen:drop-shadow-lg bg-paper"
