@@ -1,5 +1,5 @@
 import "./App.css";
-import resumeJson from "./data/resume.json";
+import resumeJson from "../public/resume.json";
 import { groupConsecutivePositionsByKey } from "./util/groupConsecutiveExperiences";
 import { Work, Volunteer } from "./types";
 import { SectionHeader, GroupedContentWithTitle } from "./components";
