@@ -1,4 +1,4 @@
-import { ContentBlock } from "../bits/ContentBlock";
+import { ContentBlock } from "../components/ContentBlock";
 import { Skill } from "../types";
 
 type SkillsBlockProps = {

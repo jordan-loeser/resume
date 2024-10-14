@@ -2,11 +2,11 @@ import "./App.css";
 import resumeJson from "./data/resume.json";
 import { groupConsecutivePositionsByKey } from "./util/groupConsecutiveExperiences";
 import { Work, Volunteer } from "./types";
-import { SectionHeader, GroupedContentWithTitle } from "./bits";
-import { WorkBlock, VolunteerBlock, EducationBlock } from "./components";
+import { SectionHeader, GroupedContentWithTitle } from "./components";
+import { WorkBlock, VolunteerBlock, EducationBlock } from "./features";
 import Balancer from "react-wrap-balancer";
 import { groupSkillsByFirstKeyword } from "./util/groupSkillsByFirstKeyword";
-import { SkillsBlock } from "./components/SkillBlock";
+import { SkillsBlock } from "./features/SkillBlock";
 
 function App() {
   const groupedWorkExperiences = groupConsecutivePositionsByKey<Work>(

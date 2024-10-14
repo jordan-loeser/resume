@@ -1,4 +1,4 @@
-import { ContentBlock } from "../bits/ContentBlock";
+import { ContentBlock } from "../components/ContentBlock";
 import { Education } from "../types";
 import { parseDateRange } from "../util/parseDates";
 
