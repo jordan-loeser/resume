@@ -37,7 +37,7 @@ function App() {
                 {resumeJson.basics.name}
               </h1>
             </section>
-            <section className="mt-2 sm:mt-0 flex-1 sm:text-right text-gray-400 text-xs font-display">
+            <section className="mt-2 sm:mt-0 flex-1 sm:text-right text-gray-400 text-xs">
               <p>
                 <a href={resumeJson.basics.url}>
                   {resumeJson.basics.url.replace(/https?:\/\//i, "")}

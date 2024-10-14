@@ -23,7 +23,7 @@ export const GroupedContentWithTitle = ({
       }
     >
       <div className="col-span-1">
-        <h3 className="font-display text-md font-bold mb-1">
+        <h3 className="text-md font-bold mb-1">
           <Balancer>{title}</Balancer>
         </h3>
       </div>
