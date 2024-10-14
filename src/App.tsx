@@ -1,12 +1,18 @@
 import "./App.css";
 import resumeJson from "../public/resume.json";
-import { groupConsecutivePositionsByKey } from "./util/groupConsecutiveExperiences";
+import Balancer from "react-wrap-balancer";
 import { Work, Volunteer } from "./types";
 import { SectionHeader, GroupedContentWithTitle } from "./components";
-import { WorkBlock, VolunteerBlock, EducationBlock } from "./features";
-import Balancer from "react-wrap-balancer";
-import { groupSkillsByFirstKeyword } from "./util/groupSkillsByFirstKeyword";
-import { SkillsBlock } from "./features/SkillBlock";
+import {
+  WorkBlock,
+  VolunteerBlock,
+  EducationBlock,
+  SkillsBlock,
+} from "./features";
+import {
+  groupConsecutivePositionsByKey,
+  groupSkillsByFirstKeyword,
+} from "./util";
 
 function App() {
   const groupedWorkExperiences = groupConsecutivePositionsByKey<Work>(
