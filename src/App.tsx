@@ -24,20 +24,20 @@ function App() {
   return (
     <div
       id="stage"
-      className="bg-slate-100 page:flex page:justify-center page:py-8 print:p-0"
+      className="page:flex page:justify-center page:py-8 print:p-0 bg-stage"
     >
       <main
         id="resume"
-        className="page:w-[8.5in] page:h-[11in] p-8 sm:p-16 bg-white flex-col page:flex"
+        className="page:w-[8.5in] page:h-[11in] p-8 sm:p-16 flex-col page:flex screen:drop-shadow-lg bg-paper"
       >
         <header>
           <div className="sm:flex flex-row">
             <section>
-              <h1 className="text-4xl font-bold font-display">
+              <h1 className="text-4xl font-bold font-display text-accent">
                 {resumeJson.basics.name}
               </h1>
             </section>
-            <section className="mt-2 sm:mt-0 flex-1 sm:text-right text-gray-400 text-xs font-display">
+            <section className="mt-2 sm:mt-0 flex-1 sm:text-right text-xs">
               <p>
                 <a href={resumeJson.basics.url}>
                   {resumeJson.basics.url.replace(/https?:\/\//i, "")}
@@ -116,7 +116,7 @@ function App() {
             </section>
           </div>
         </section>
-        <footer className="py-4 mt-4 sm:mt-0 page:py-0 sm:flex flex-row items-end text-gray-400 text-xs text-center">
+        <footer className="py-4 mt-4 sm:mt-0 page:py-0 sm:flex flex-row items-end text-xs text-center">
           <section className="flex-1 page:text-left">
             <p>Built using React, Vite, and Tailwind</p>
           </section>

@@ -37,14 +37,14 @@ export const ContentBlock = ({
         </h4>
       )}
       {subtitle && (
-        <h5 className="text-sm text-gray-500">
+        <h5 className="text-sm">
           <ConditionalBalancer balance={useBalancer}>
             {subtitle}
           </ConditionalBalancer>
         </h5>
       )}
       {subtitle2 && (
-        <h6 className="text-sm text-gray-500">
+        <h6 className="text-sm">
           <ConditionalBalancer balance={useBalancer}>
             {subtitle2}
           </ConditionalBalancer>
