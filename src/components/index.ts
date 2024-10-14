@@ -1,3 +1,4 @@
-export { EducationBlock } from "./EducationBlock";
-export { WorkBlock } from "./WorkBlock";
-export { VolunteerBlock } from "./VolunteerBlock";
+export { ContentBlock } from "./ContentBlock";
+export { GroupedContentWithTitle } from "../features/GroupedContentWithTitle";
+export { SectionHeader } from "./SectionHeader";
+export { Button } from "./Button";

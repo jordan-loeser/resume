@@ -2,11 +2,13 @@ import "./App.css";
 import resumeJson from "./data/resume.json";
 import { groupConsecutivePositionsByKey } from "./util/groupConsecutiveExperiences";
 import { Work, Volunteer } from "./types";
-import { SectionHeader, GroupedContentWithTitle } from "./bits";
-import { WorkBlock, VolunteerBlock, EducationBlock } from "./components";
+import { SectionHeader, GroupedContentWithTitle } from "./components";
+import { WorkBlock, VolunteerBlock, EducationBlock } from "./features";
 import Balancer from "react-wrap-balancer";
 import { groupSkillsByFirstKeyword } from "./util/groupSkillsByFirstKeyword";
-import { SkillsBlock } from "./components/SkillBlock";
+import { SkillsBlock } from "./features/SkillBlock";
+import { GitHubButton } from "./features/GitHubButton";
+import { DownloadButton } from "./features/DownloadButton";
 
 function App() {
   const groupedWorkExperiences = groupConsecutivePositionsByKey<Work>(
@@ -24,8 +26,15 @@ function App() {
   return (
     <div
       id="stage"
-      className="page:flex page:justify-center page:py-8 print:p-0 bg-stage"
+      className="page:flex page:justify-center page:py-16 print:p-0 bg-stage"
     >
+      <div
+        id="toolbar"
+        className="print:hidden fixed z-10 bottom-0 page:top-0 right-0 p-4"
+      >
+        <GitHubButton />
+        <DownloadButton />
+      </div>
       <main
         id="resume"
         className="page:w-[8.5in] page:h-[11in] p-8 sm:p-16 flex-col page:flex screen:drop-shadow-lg bg-paper"
