@@ -6,8 +6,6 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        // sans: ["Roboto", "Arial", "sans-serif"],
-        // serif: ["Young Serif", "ui-serif", "serif"],
         display: ["Young Serif", ...defaultTheme.fontFamily.serif],
       },
       screens: {
@@ -16,8 +14,9 @@ export default {
         page: "8.5in",
       },
       colors: {
-        mahogany: "#270000",
-        coral: "#ff2f2f",
+        accent: "#26a965",
+        paper: "#f5f4e8",
+        stage: "#dfdfdf",
       },
     },
   },
