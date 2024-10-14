@@ -1,5 +1,5 @@
-import { Button } from "../components";
-import { DownloadIcon } from "../components/icons";
+import { Button } from "../features";
+import { DownloadIcon } from "../features/icons";
 
 export const DownloadButton = () => (
   <Button
