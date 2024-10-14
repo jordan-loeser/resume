@@ -1,5 +1,5 @@
-import { Button } from "../features";
-import { GitHubIcon } from "../features/icons";
+import { Button } from "../components";
+import { GitHubIcon } from "../components/icons";
 
 export const GitHubButton = () => (
   <Button

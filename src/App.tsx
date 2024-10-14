@@ -7,8 +7,8 @@ import { WorkBlock, VolunteerBlock, EducationBlock } from "./features";
 import Balancer from "react-wrap-balancer";
 import { groupSkillsByFirstKeyword } from "./util/groupSkillsByFirstKeyword";
 import { SkillsBlock } from "./features/SkillBlock";
-import { GitHubButton } from "./components/GitHubButton";
-import { DownloadButton } from "./components/DownloadButton";
+import { GitHubButton } from "./features/GitHubButton";
+import { DownloadButton } from "./features/DownloadButton";
 
 function App() {
   const groupedWorkExperiences = groupConsecutivePositionsByKey<Work>(
