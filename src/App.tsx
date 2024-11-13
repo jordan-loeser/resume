@@ -26,7 +26,7 @@ function App() {
   return (
     <div
       id="stage"
-      className="page:flex page:justify-center page:py-16 print:p-0 bg-stage"
+      className="page:flex print:flex page:justify-center page:py-16 print:p-0 bg-stage"
     >
       <div
         id="toolbar"
@@ -37,7 +37,7 @@ function App() {
       </div>
       <main
         id="resume"
-        className="page:w-[8.5in] page:h-[11in] p-8 sm:p-16 flex-col page:flex screen:drop-shadow-lg bg-paper"
+        className="page:w-[8.5in] print:w-[8.5in] page:h-[11in] print:h-[11in] p-8 sm:p-16 flex-col page:flex print:flex screen:drop-shadow-lg bg-paper"
       >
         <header>
           <div className="sm:flex flex-row">
@@ -125,11 +125,11 @@ function App() {
             </section>
           </div>
         </section>
-        <footer className="py-4 mt-4 sm:mt-0 page:py-0 sm:flex flex-row items-end text-xs text-center">
-          <section className="flex-1 page:text-left">
+        <footer className="py-4 mt-4 sm:mt-0 page:py-0 print:py-0 sm:flex flex-row items-end text-xs text-center">
+          <section className="flex-1 page:text-left print:text-left">
             <p>Built using React, Vite, and Tailwind</p>
           </section>
-          <section className="flex-1 page:text-right">
+          <section className="flex-1 page:text-right print:text-right">
             <p>
               <a href="https://resume.jordanloeser.com">
                 resume.jordanloeser.com
