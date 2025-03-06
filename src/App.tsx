@@ -127,7 +127,11 @@ function App() {
         </section>
         <footer className="py-4 mt-4 sm:mt-0 page:py-0 print:py-0 sm:flex flex-row items-end text-xs text-center">
           <section className="flex-1 page:text-left print:text-left">
-            <p>Built using React, Vite, and Tailwind</p>
+            <p>
+              <Balancer>
+                This resume is a web app built using React, Vite, and Tailwind!
+              </Balancer>
+            </p>
           </section>
           <section className="flex-1 page:text-right print:text-right">
             <p>

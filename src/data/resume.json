@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Jordan Loeser",
-    "label": "Software Engineer behind 5 years of Spotify Wrapped.",
+    "label": "Software Engineer supporting 5+ years of Spotify Wrapped.",
     "image": "",
     "email": "loeser.jordan@gmail.com",
     "phone": "317.442.2537",
@@ -75,9 +75,17 @@
     {
       "organization": "Out for Undergrad",
       "summary": "Orchestrating fully-funded professional development conference experiences for 350+ LGBTQ+ undergraduates.",
+      "position": "National Conference Lead",
+      "startDate": "2023-12-01",
+      "endDate": "",
+      "highlights": [],
+      "url": "https://www.linkedin.com/company/out-for-undergrad/"
+    },
+    {
+      "organization": "Out for Undergrad",
       "position": "Lead Programming Director",
       "startDate": "2023-12-31",
-      "endDate": "",
+      "endDate": "2024-11-31",
       "highlights": [],
       "url": "https://www.linkedin.com/company/out-for-undergrad/"
     },
@@ -93,7 +101,7 @@
   "education": [
     {
       "institution": "Purdue University",
-      "area": "Computer Engineering with Honors",
+      "area": "Computer Engineering with Honors, Minor Electronic Art",
       "studyType": "BSCmpE",
       "startDate": "2016-08-01",
       "endDate": "2020-05-01",
