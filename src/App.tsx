@@ -42,7 +42,7 @@ function App() {
         <header>
           <div className="sm:flex flex-row">
             <section>
-              <h1 className="text-4xl font-bold font-display text-accent">
+              <h1 className="text-4xl font-bold font-display text-accent tracking-tighter">
                 {resumeJson.basics.name}
               </h1>
             </section>
