@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Jordan Loeser",
-    "label": "Software Engineer supporting 5+ years of Spotify Wrapped.",
+    "label": "Lead Software Engineer behind 6 years of Spotify Wrapped, reaching 250M+ users annually.",
     "image": "",
     "email": "loeser.jordan@gmail.com",
     "phone": "317.442.2537",
@@ -27,7 +27,7 @@
       "startDate": "2022-10-01",
       "endDate": "",
       "highlights": [],
-      "summary": "Key engineer for Spotify Wrapped 2023–2025, leading brand visuals and social sharecard image generation workstreams. Project-managed Heardle, Spotify’s first gaming acquisition.",
+      "summary": "Key engineer for Spotify Wrapped 2023–2025, leading brand visuals and social sharecard image generation workstreams. Project-managed Heardle, Spotify's first gaming acquisition.",
       "url": "https://www.linkedin.com/company/spotify/",
       "location": "New York"
     },
