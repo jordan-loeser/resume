@@ -2,7 +2,7 @@ import "./App.css";
 import resumeJson from "./data/resume.json";
 import { groupConsecutivePositionsByKey } from "./util/groupConsecutiveExperiences";
 import { Work, Volunteer } from "./types";
-import { SectionHeader, GroupedContentWithTitle } from "./components";
+import { SectionHeader } from "./components";
 import { WorkBlock, VolunteerBlock, EducationBlock } from "./features";
 import Balancer from "react-wrap-balancer";
 import { groupSkillsByFirstKeyword } from "./util/groupSkillsByFirstKeyword";
@@ -66,28 +66,39 @@ function App() {
         </header>
         <section
           id="body"
-          className="sm:grid grid-cols-6 gap-3 auto-rows-min flex-1"
+          className="sm:grid grid-cols-5 gap-4 auto-rows-min flex-1"
         >
-          <div id="col-left" className="col-span-4">
+          <div id="col-left" className="col-span-3">
             <section id="work">
               <SectionHeader>Work Experience</SectionHeader>
-              {groupedWorkExperiences.map((group, i) => (
-                <GroupedContentWithTitle
-                  key={`work-${i}-${group[0].name}`}
-                  title={group[0].name}
-                  titlePosition="left"
-                >
-                  {group.map((position) => (
-                    <WorkBlock
-                      key={`position-${position.name}-${position.position}`}
-                      position={position}
-                    />
-                  ))}
-                </GroupedContentWithTitle>
-              ))}
+              <div className="grid grid-cols-1 md:grid-cols-[min-content_auto] gap-2 sm:gap-4">
+                {groupedWorkExperiences.map((group, i) => (
+                  <>
+                    <div
+                      className="col-span-1"
+                      key={`work-${i}-${group[0].name}-title`}
+                    >
+                      <h3 className="text-md font-bold mb-1">
+                        {group[0].name}
+                      </h3>
+                    </div>
+                    <div
+                      className="col-span-1"
+                      key={`work-${i}-${group[0].name}-content`}
+                    >
+                      {group.map((position) => (
+                        <WorkBlock
+                          key={`position-${position.name}-${position.position}`}
+                          position={position}
+                        />
+                      ))}
+                    </div>
+                  </>
+                ))}
+              </div>
             </section>
           </div>
-          <div id="col-right" className="col-start-5 col-span-2">
+          <div id="col-right" className="col-start-4 col-span-2">
             <section id="education" className="mb-6">
               <SectionHeader>Education</SectionHeader>
               {resumeJson.education.map((experience) => (
@@ -100,17 +111,22 @@ function App() {
             <section id="volunteer" className="mb-6">
               <SectionHeader>Community Leadership</SectionHeader>
               {groupedVolunteerExperiences.map((group, i) => (
-                <GroupedContentWithTitle
-                  key={`volunteer-${i}-${group[0].organization}`}
-                  title={group[0].organization}
-                >
-                  {group.map((position) => (
-                    <VolunteerBlock
-                      key={`position-${position.organization}-${position.position}`}
-                      position={position}
-                    />
-                  ))}
-                </GroupedContentWithTitle>
+                <>
+                  <h3
+                    className="text-md font-bold mb-1"
+                    key={`volunteer-${i}-${group[0].organization}-title`}
+                  >
+                    <Balancer>{group[0].organization}</Balancer>
+                  </h3>
+                  <div key={`volunteer-${i}-${group[0].organization}`}>
+                    {group.map((position) => (
+                      <VolunteerBlock
+                        key={`position-${position.organization}-${position.position}`}
+                        position={position}
+                      />
+                    ))}
+                  </div>
+                </>
               ))}
             </section>
             <section id="skills">
