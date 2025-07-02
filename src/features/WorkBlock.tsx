@@ -14,6 +14,7 @@ export const WorkBlock = ({ position }: { position: Work }) => {
       title={position.position}
       subtitle={getSubtitle(position)}
       body={position.summary}
+      bullets={position.highlights}
     />
   );
 };

@@ -68,10 +68,11 @@ function App() {
           id="body"
           className="sm:grid grid-cols-5 gap-4 auto-rows-min flex-1"
         >
-          <div id="col-left" className="col-span-3">
+          <div id="col-left" className="col-span-5">
             <section id="work">
               <SectionHeader>Work Experience</SectionHeader>
-              <div className="grid grid-cols-1 md:grid-cols-[min-content_auto] gap-2 sm:gap-4">
+              {/* // md:grid-cols-[1fr_auto] */}
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-2 sm:gap-4">
                 {groupedWorkExperiences.map((group, i) => (
                   <>
                     <div
@@ -83,7 +84,7 @@ function App() {
                       </h3>
                     </div>
                     <div
-                      className="col-span-1"
+                      className="col-span-4"
                       key={`work-${i}-${group[0].name}-content`}
                     >
                       {group.map((position) => (
@@ -98,7 +99,7 @@ function App() {
               </div>
             </section>
           </div>
-          <div id="col-right" className="col-start-4 col-span-2">
+          <div id="col-right" className="col-start-4 col-span-2 hidden">
             <section id="education" className="mb-6">
               <SectionHeader>Education</SectionHeader>
               {resumeJson.education.map((experience) => (

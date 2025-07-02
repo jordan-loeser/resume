@@ -26,8 +26,13 @@
       "position": "Engineer II",
       "startDate": "2022-10-01",
       "endDate": "",
-      "highlights": [],
-      "summary": "Key engineer for Spotify Wrapped 2023–2025, leading brand visuals and social sharecard image generation workstreams. Project-managed Heardle, Spotify's first gaming acquisition.",
+      "summary": "Bring deep UI and animation craft to Spotify’s most visible campaigns, leading engineering for Wrapped’s personalized sharecard platform since 2020.",
+      "highlights": [
+        "Deliver localized, visually rich experiences to 250M+ users across 30+ languages, scaling infrastructure to support 425M+ dynamic renders and over 120M sharers in 2024.",
+        "Cut engineering lift by 60% and halved launch timelines through templating and tooling improvements.",
+        "Managed cross-functional collaboration across design, product, and backend to ship performant, accessible interfaces at global scale.",
+        "Drove 100K incremental MAU via SEO experimentation."
+      ],
       "url": "https://www.linkedin.com/company/spotify/",
       "location": "New York"
     },
@@ -36,9 +41,7 @@
       "position": "Engineer I",
       "startDate": "2021-09-30",
       "endDate": "2022-09-30",
-      "summary": "Tech-led Wrapped 2021 and 2022 sharecard workstreams, which were implemented in 30+ languages across 100+ markets, engaging over 120 million users each year.",
-      "url": "https://www.linkedin.com/company/spotify/",
-      "location": "New York"
+      "url": "https://www.linkedin.com/company/spotify/"
     },
     {
       "name": "Spotify",
@@ -46,9 +49,7 @@
       "startDate": "2020-06-30",
       "endDate": "2021-09-30",
       "highlights": [],
-      "summary": "Led planning and development of teaser page for Wrapped 2020 campaign.",
-      "url": "https://www.linkedin.com/company/spotify/",
-      "location": "New York"
+      "url": "https://www.linkedin.com/company/spotify/"
     },
     {
       "name": "Snapchat",
