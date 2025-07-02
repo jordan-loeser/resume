@@ -3,7 +3,6 @@ import Balancer from "react-wrap-balancer";
 type ContentBlockProps = {
   title?: string;
   subtitle?: string;
-  subtitle2?: string;
   body?: string;
   smallBody?: string;
   bullets?: string[];
@@ -23,52 +22,50 @@ const ConditionalBalancer = ({
 export const ContentBlock = ({
   title,
   subtitle,
-  subtitle2,
   body,
   smallBody,
   bullets,
   useBalancer = true,
 }: ContentBlockProps) => (
-  <>
-    <hgroup className="mb-1 last:mb-0">
+  <article className="space-y-1">
+    <hgroup className="text-sm font-semibold leading-tight">
       {title && (
-        <h4 className="text-sm font-bold text-gray-800">
+        <h4>
           <ConditionalBalancer balance={useBalancer}>
             {title}
           </ConditionalBalancer>
         </h4>
       )}
       {subtitle && (
-        <h5 className="text-sm font-medium text-gray-600">
+        <h5 className="text-gray-700">
           <ConditionalBalancer balance={useBalancer}>
             {subtitle}
           </ConditionalBalancer>
         </h5>
       )}
-      {subtitle2 && (
-        <h6 className="text-sm font-medium text-gray-600">
-          <ConditionalBalancer balance={useBalancer}>
-            {subtitle2}
-          </ConditionalBalancer>
-        </h6>
-      )}
     </hgroup>
-    {body && (
-      <p className="text-sm font-light text-gray-700 leading-snug mb-2 last:mb-0">
-        <ConditionalBalancer balance={useBalancer}>{body}</ConditionalBalancer>
-      </p>
+    {(body || smallBody) && (
+      <div className="font-light leading-snug">
+        {body && (
+          <p className="text-sm">
+            <ConditionalBalancer balance={useBalancer}>
+              {body}
+            </ConditionalBalancer>
+          </p>
+        )}
+        {smallBody && (
+          <p className="text-xs text-gray-600">
+            <ConditionalBalancer balance={useBalancer}>
+              {smallBody}
+            </ConditionalBalancer>
+          </p>
+        )}
+      </div>
     )}
-    {smallBody && (
-      <p className="text-xs font-light text-gray-500 leading-snug mb-2 last:mb-0">
-        <ConditionalBalancer balance={useBalancer}>
-          {smallBody}
-        </ConditionalBalancer>
-      </p>
-    )}
-    {bullets && (
-      <ul className="list-[square] pl-4 text-xs font-light text-gray-500 leading-snug mb-2 last:mb-0">
+    {bullets && bullets.length > 0 && (
+      <ul className="list-[square] pl-4 text-sm font-light leading-snug space-y-1 text-gray-600">
         {bullets?.map((bullet) => (
-          <li key={bullet} className="mb-1 last:mb-0">
+          <li key={bullet}>
             <ConditionalBalancer balance={useBalancer}>
               {bullet}
             </ConditionalBalancer>
@@ -76,5 +73,5 @@ export const ContentBlock = ({
         ))}
       </ul>
     )}
-  </>
+  </article>
 );

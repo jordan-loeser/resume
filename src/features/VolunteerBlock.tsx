@@ -11,9 +11,9 @@ const getSubtitle = (position: Volunteer) => {
 export const VolunteerBlock = ({ position }: { position: Volunteer }) => {
   return (
     <ContentBlock
-      title={position.position}
+      title={`${position.position} at ${position.organization}`}
       subtitle={getSubtitle(position)}
-      smallBody={position.summary}
+      body={position.summary}
     />
   );
 };

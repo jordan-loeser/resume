@@ -14,6 +14,7 @@ export const EducationBlock = ({ experience }: { experience: Education }) => {
       title={experience.institution}
       subtitle={parseDateRange(experience.startDate, experience.endDate)}
       body={getSubtitle(experience)}
+      smallBody={experience.courses?.join(", ")}
     />
   );
 };

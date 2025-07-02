@@ -11,7 +11,7 @@ const getSubtitle = (position: Work) => {
 export const WorkBlock = ({ position }: { position: Work }) => {
   return (
     <ContentBlock
-      title={position.position}
+      title={`${position.name} • ${position.position}`}
       subtitle={getSubtitle(position)}
       body={position.summary}
       bullets={position.highlights}

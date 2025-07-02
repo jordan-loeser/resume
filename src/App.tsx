@@ -1,8 +1,6 @@
 import "./App.css";
 import resumeJson from "./data/resume.json";
-import { groupConsecutivePositionsByKey } from "./util/groupConsecutiveExperiences";
-import { Work, Volunteer } from "./types";
-import { SectionHeader } from "./components";
+import { Section } from "./components";
 import { WorkBlock, VolunteerBlock, EducationBlock } from "./features";
 import Balancer from "react-wrap-balancer";
 import { groupSkillsByFirstKeyword } from "./util/groupSkillsByFirstKeyword";
@@ -11,16 +9,6 @@ import { GitHubButton } from "./features/GitHubButton";
 import { DownloadButton } from "./features/DownloadButton";
 
 function App() {
-  const groupedWorkExperiences = groupConsecutivePositionsByKey<Work>(
-    resumeJson.work!,
-    "name"
-  );
-
-  const groupedVolunteerExperiences = groupConsecutivePositionsByKey<Volunteer>(
-    resumeJson.volunteer!,
-    "organization"
-  );
-
   const groupedSkills = groupSkillsByFirstKeyword(resumeJson.skills!);
 
   return (
@@ -41,12 +29,12 @@ function App() {
       >
         <header>
           <div className="sm:flex flex-row">
-            <section>
+            <div>
               <h1 className="text-4xl font-bold font-display text-accent tracking-tighter">
                 {resumeJson.basics.name}
               </h1>
-            </section>
-            <section className="mt-2 sm:mt-0 flex-1 sm:text-right text-xs">
+            </div>
+            <div className="mt-2 sm:mt-0 flex-1 sm:text-right text-xs">
               <p>
                 <a href={resumeJson.basics.url}>
                   {resumeJson.basics.url.replace(/https?:\/\//i, "")}
@@ -58,80 +46,36 @@ function App() {
                 </a>
               </p>
               <p>{resumeJson.basics.phone}</p>
-            </section>
+            </div>
           </div>
-          <h2 className="text-xl my-6">
+          <h2 className="text-xl my-3 mb-6">
             <Balancer>{resumeJson.basics.label}</Balancer>
           </h2>
         </header>
-        <section
+        <main
           id="body"
-          className="sm:grid grid-cols-5 gap-4 auto-rows-min flex-1"
+          className="sm:grid grid-cols-9 gap-6 auto-rows-min flex-1"
         >
-          <div id="col-left" className="col-span-5">
-            <section id="work">
-              <SectionHeader>Work Experience</SectionHeader>
-              {/* // md:grid-cols-[1fr_auto] */}
-              <div className="grid grid-cols-1 md:grid-cols-5 gap-2 sm:gap-4">
-                {groupedWorkExperiences.map((group, i) => (
-                  <>
-                    <div
-                      className="col-span-1"
-                      key={`work-${i}-${group[0].name}-title`}
-                    >
-                      <h3 className="text-md font-bold mb-1">
-                        {group[0].name}
-                      </h3>
-                    </div>
-                    <div
-                      className="col-span-4"
-                      key={`work-${i}-${group[0].name}-content`}
-                    >
-                      {group.map((position) => (
-                        <WorkBlock
-                          key={`position-${position.name}-${position.position}`}
-                          position={position}
-                        />
-                      ))}
-                    </div>
-                  </>
-                ))}
-              </div>
-            </section>
-          </div>
-          <div id="col-right" className="col-start-4 col-span-2 hidden">
-            <section id="education" className="mb-6">
-              <SectionHeader>Education</SectionHeader>
-              {resumeJson.education.map((experience) => (
-                <EducationBlock
-                  key={`education-${experience.institution}-${experience.area}`}
-                  experience={experience}
+          <div id="col-left" className="col-span-6">
+            <Section id="work" title="Work Experience">
+              {resumeJson.work!.map((position) => (
+                <WorkBlock
+                  key={`position-${position.name}-${position.position}`}
+                  position={position}
                 />
               ))}
-            </section>
-            <section id="volunteer" className="mb-6">
-              <SectionHeader>Community Leadership</SectionHeader>
-              {groupedVolunteerExperiences.map((group, i) => (
-                <>
-                  <h3
-                    className="text-md font-bold mb-1"
-                    key={`volunteer-${i}-${group[0].organization}-title`}
-                  >
-                    <Balancer>{group[0].organization}</Balancer>
-                  </h3>
-                  <div key={`volunteer-${i}-${group[0].organization}`}>
-                    {group.map((position) => (
-                      <VolunteerBlock
-                        key={`position-${position.organization}-${position.position}`}
-                        position={position}
-                      />
-                    ))}
-                  </div>
-                </>
+            </Section>
+            <Section id="volunteer" title="Community Leadership">
+              {resumeJson.volunteer!.map((position) => (
+                <VolunteerBlock
+                  key={`position-${position.organization}-${position.position}`}
+                  position={position}
+                />
               ))}
-            </section>
-            <section id="skills">
-              <SectionHeader>Skills</SectionHeader>
+            </Section>
+          </div>
+          <div id="col-right" className="col-span-3">
+            <Section id="skills" title="Skills">
               {Object.entries(groupedSkills).map(([keyword, skills], i) => (
                 <SkillsBlock
                   key={`skills-${i}-${keyword}`}
@@ -139,24 +83,31 @@ function App() {
                   skills={skills}
                 />
               ))}
-            </section>
+            </Section>
+            <Section id="education" title="Education">
+              {resumeJson.education.map((experience) => (
+                <EducationBlock
+                  key={`education-${experience.institution}-${experience.area}`}
+                  experience={experience}
+                />
+              ))}
+            </Section>
           </div>
-        </section>
+        </main>
         <footer className="py-4 mt-4 sm:mt-0 page:py-0 print:py-0 sm:flex flex-row items-end text-xs text-center">
-          <section className="flex-1 page:text-left print:text-left">
+          <div className="flex-1 page:text-left print:text-left">
             <p>
               <Balancer>
-                This resume is a web app built using React, Vite, and Tailwind!
+                This resume is a printable web app built using React, Vite, and
+                Tailwind.
               </Balancer>
             </p>
-          </section>
-          <section className="flex-1 page:text-right print:text-right">
             <p>
               <a href="https://resume.jordanloeser.com">
                 resume.jordanloeser.com
               </a>
             </p>
-          </section>
+          </div>
         </footer>
       </main>
     </div>

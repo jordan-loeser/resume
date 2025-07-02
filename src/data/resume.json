@@ -24,9 +24,9 @@
     {
       "name": "Spotify",
       "position": "Engineer II",
-      "startDate": "2022-10-01",
+      "startDate": "2020-06-30",
       "endDate": "",
-      "summary": "Bring deep UI and animation craft to Spotify’s most visible campaigns, leading engineering for Wrapped’s personalized sharecard platform since 2020.",
+      "summary": "Promoted from Associate → Engineer I → Engineer II while leading engineering for Wrapped’s personalized sharecard platform, Spotify’s most visible consumer campaign.",
       "highlights": [
         "Deliver localized, visually rich experiences to 250M+ users across 30+ languages, scaling infrastructure to support 425M+ dynamic renders and over 120M sharers in 2024.",
         "Cut engineering lift by 60% and halved launch timelines through templating and tooling improvements.",
@@ -37,27 +37,12 @@
       "location": "New York"
     },
     {
-      "name": "Spotify",
-      "position": "Engineer I",
-      "startDate": "2021-09-30",
-      "endDate": "2022-09-30",
-      "url": "https://www.linkedin.com/company/spotify/"
-    },
-    {
-      "name": "Spotify",
-      "position": "Associate Engineer",
-      "startDate": "2020-06-30",
-      "endDate": "2021-09-30",
-      "highlights": [],
-      "url": "https://www.linkedin.com/company/spotify/"
-    },
-    {
       "name": "Snapchat",
       "position": "Software Engineering Intern",
       "startDate": "2019-06-30",
       "endDate": "2019-08-31",
       "highlights": [],
-      "summary": "Developed onboarding and account recovery features with the Growth team.",
+      "summary": "Growth engineer for onboarding and account recovery.",
       "url": "https://www.linkedin.com/company/snap-inc-co/",
       "location": "Los Angeles"
     },
@@ -67,7 +52,7 @@
       "startDate": "2018-06-30",
       "endDate": "2018-08-31",
       "highlights": [],
-      "summary": "Designed a CI pipeline for an enterprise authentication service.",
+      "summary": "Designed CI pipeline for enterprise auth service.",
       "url": "https://www.linkedin.com/company/the-walt-disney-company/",
       "location": "Seattle"
     }
@@ -75,9 +60,9 @@
   "volunteer": [
     {
       "organization": "Out for Undergrad",
-      "summary": "Leading a 20-person team driving admissions, sponsorship, and programming for a fully-funded conference experience serving 350+ LGBTQ+ undergraduates annually.",
+      "summary": "Lead 20-person team delivering a fully funded conference for 350+ LGBTQ+ undergrads annually, driving admissions, sponsorship, and programming.",
       "position": "National Conference Lead",
-      "startDate": "2023-12-01",
+      "startDate": "2024-12-01",
       "endDate": "",
       "highlights": [],
       "url": "https://www.linkedin.com/company/out-for-undergrad/"
@@ -94,21 +79,12 @@
   "education": [
     {
       "institution": "Purdue University",
-      "area": "Computer Engineering with Honors, Minor Electronic Art",
-      "studyType": "BSCmpE",
+      "area": "Computer Engineering",
+      "studyType": "BS",
       "startDate": "2016-08-01",
       "endDate": "2020-05-01",
       "score": "",
-      "courses": []
-    },
-    {
-      "institution": "Universidad Carlos III de Madrid",
-      "area": "",
-      "studyType": "Study Abroad",
-      "startDate": "2019-01-01",
-      "endDate": "2019-06-01",
-      "score": "",
-      "courses": []
+      "courses": ["with Honors", "Minor in Electronic Art"]
     }
   ],
   "awards": [],

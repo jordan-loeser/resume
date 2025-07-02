@@ -1,3 +1,3 @@
 export { ContentBlock } from "./ContentBlock";
-export { SectionHeader } from "./SectionHeader";
+export { Section } from "./Section";
 export { Button } from "./Button";
