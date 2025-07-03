@@ -2,12 +2,11 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Jordan Loeser",
-    "label": "Lead Software Engineer behind 6 years of Spotify Wrapped, reaching 250M+ users annually.",
-    "image": "",
+    "label": "Bringing deep UI and animation craft to Spotify's most visible campaigns, leading engineering for Wrapped's personalized sharecard platform since 2020.",
+    "labelz": "Lead Software Engineer behind 6 years of Spotify Wrapped, reaching 250M+ users annually.",
     "email": "loeser.jordan@gmail.com",
     "phone": "317.442.2537",
     "url": "https://jordanloeser.com",
-    "summary": "",
     "location": {
       "countryCode": "US",
       "address": "United States"
@@ -25,12 +24,11 @@
       "name": "Spotify",
       "position": "Engineer II",
       "startDate": "2020-06-30",
-      "endDate": "",
-      "summary": "Promoted from Associate → Engineer I → Engineer II while leading engineering for Wrapped’s personalized sharecard platform, Spotify’s most visible consumer campaign.",
+      "summary": "Promoted from Associate → Engineer I → Engineer II while leading engineering for Wrapped's personalized sharecard platform, Spotify's most visible consumer campaign.",
       "highlights": [
         "Deliver localized, visually rich experiences to 250M+ users across 30+ languages, scaling infrastructure to support 425M+ dynamic renders and over 120M sharers in 2024.",
         "Cut engineering lift by 60% and halved launch timelines through templating and tooling improvements.",
-        "Managed cross-functional collaboration across design, product, and backend to ship performant, accessible interfaces at global scale.",
+        "Managed cross-functionally across design, product, and backend to ship performant, accessible interfaces at global scale.",
         "Drove 100K incremental MAU via SEO experimentation."
       ],
       "url": "https://www.linkedin.com/company/spotify/",
@@ -41,8 +39,11 @@
       "position": "Software Engineering Intern",
       "startDate": "2019-06-30",
       "endDate": "2019-08-31",
-      "highlights": [],
       "summary": "Growth engineer for onboarding and account recovery.",
+      "highlights": [
+        "Implemented account recovery flow used by 700k users daily.",
+        "Drove A/B testing for Android onboarding flow retention."
+      ],
       "url": "https://www.linkedin.com/company/snap-inc-co/",
       "location": "Los Angeles"
     },
@@ -51,7 +52,7 @@
       "position": "Software Engineering Intern",
       "startDate": "2018-06-30",
       "endDate": "2018-08-31",
-      "highlights": [],
+      "highlights": ["Supported migration to AWS cloud-based system."],
       "summary": "Designed CI pipeline for enterprise auth service.",
       "url": "https://www.linkedin.com/company/the-walt-disney-company/",
       "location": "Seattle"
@@ -60,11 +61,9 @@
   "volunteer": [
     {
       "organization": "Out for Undergrad",
-      "summary": "Lead 20-person team delivering a fully funded conference for 350+ LGBTQ+ undergrads annually, driving admissions, sponsorship, and programming.",
+      "summary": "Lead 20-person team to deliver a fully funded annual conference for 300+ LGBTQ+ undergrads, wearing multiple hats across admissions, sponsorship, and programming.",
       "position": "National Conference Lead",
       "startDate": "2024-12-01",
-      "endDate": "",
-      "highlights": [],
       "url": "https://www.linkedin.com/company/out-for-undergrad/"
     },
     {
@@ -72,7 +71,6 @@
       "position": "Director",
       "startDate": "2021-12-31",
       "endDate": "2024-11-31",
-      "highlights": [],
       "url": "https://www.linkedin.com/company/out-for-undergrad/"
     }
   ],
@@ -83,101 +81,97 @@
       "studyType": "BS",
       "startDate": "2016-08-01",
       "endDate": "2020-05-01",
-      "score": "",
       "courses": ["with Honors", "Minor in Electronic Art"]
+    },
+    {
+      "institution": "Universidad Carlos III de Madrid",
+      "startDate": "2019-01-01",
+      "endDate": "2019-06-01",
+      "courses": ["Sudy Abroad"]
     }
   ],
-  "awards": [],
-  "certificates": [],
-  "publications": [],
   "skills": [
     {
-      "name": "HTML",
-      "level": "",
+      "name": "JavaScript",
       "keywords": ["Languages"]
     },
     {
-      "name": "CSS",
-      "level": "",
-      "keywords": ["Languages"]
-    },
-    {
-      "name": "Javascript",
-      "level": "",
-      "keywords": ["Languages"]
-    },
-    {
-      "name": "Typescript",
-      "level": "",
+      "name": "TypeScript",
       "keywords": ["Languages"]
     },
     {
       "name": "Python",
-      "level": "",
       "keywords": ["Languages"]
     },
     {
       "name": "Java",
-      "level": "",
-      "keywords": ["Languages"]
-    },
-    {
-      "name": "C",
-      "level": "",
       "keywords": ["Languages"]
     },
     {
       "name": "React",
-      "level": "",
-      "keywords": ["Frameworks"]
+      "keywords": ["Frameworks, Tools & Platforms"]
     },
     {
       "name": "Next.js",
-      "level": "",
-      "keywords": ["Frameworks"]
-    },
-    {
-      "name": "Three.js",
-      "level": "",
-      "keywords": ["Frameworks"]
+      "keywords": ["Frameworks, Tools & Platforms"]
     },
     {
       "name": "React Native",
-      "level": "",
-      "keywords": ["Frameworks"]
-    },
-    {
-      "name": "Figma",
-      "level": "",
-      "keywords": ["Design"]
-    },
-    {
-      "name": "Adobe Suite",
-      "level": "",
-      "keywords": ["Design"]
-    },
-    {
-      "name": "CAD",
-      "level": "",
-      "keywords": ["Design"]
-    },
-    {
-      "name": "Vite",
-      "level": "",
-      "keywords": ["Frameworks"]
+      "keywords": ["Frameworks, Tools & Platforms"]
     },
     {
       "name": "Firebase",
-      "level": "",
-      "keywords": ["Frameworks"]
+      "keywords": ["Frameworks, Tools & Platforms"]
     },
     {
-      "name": "Turbo",
-      "level": "",
-      "keywords": ["Frameworks"]
+      "name": "Three.js",
+      "keywords": ["Frameworks, Tools & Platforms"]
+    },
+    {
+      "name": "GSAP",
+      "keywords": ["Frameworks, Tools & Platforms"]
+    },
+    {
+      "name": "Vercel",
+      "keywords": ["Frameworks, Tools & Platforms"]
+    },
+    {
+      "name": "Node.js",
+      "keywords": ["Frameworks, Tools & Platforms"]
+    },
+    {
+      "name": "Git",
+      "keywords": ["Frameworks, Tools & Platforms"]
+    },
+    {
+      "name": "Figma",
+      "keywords": ["Design & Interaction"]
+    },
+    {
+      "name": "Photoshop",
+      "keywords": ["Design & Interaction"]
+    },
+    {
+      "name": "Illustrator",
+      "keywords": ["Design & Interaction"]
+    },
+    {
+      "name": "Web Animation",
+      "keywords": ["Design & Interaction"]
+    },
+    {
+      "name": "Project Management",
+      "keywords": ["Collaboration & Leadership"]
+    },
+    {
+      "name": "Public Speaking",
+      "keywords": ["Collaboration & Leadership"]
+    },
+    {
+      "name": "CSS",
+      "keywords": ["Languages"]
     }
   ],
-  "projects": [],
   "meta": {
     "version": "v1.0.0",
     "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"

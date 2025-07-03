@@ -3,6 +3,7 @@ import { Education } from "../types";
 import { parseDateRange } from "../util/parseDates";
 
 const getSubtitle = (experience: Education) => {
+  if (!experience.studyType && !experience.area) return undefined;
   if (experience.studyType && !experience.area) return experience.studyType;
   if (!experience.studyType && experience.area) return experience.area;
   return `${experience.studyType} in ${experience.area}`;

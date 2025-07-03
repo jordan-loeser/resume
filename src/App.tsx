@@ -25,7 +25,7 @@ function App() {
       </div>
       <main
         id="resume"
-        className="page:w-[8.5in] print:w-[8.5in] page:h-[11in] print:h-[11in] p-8 sm:p-16 flex-col page:flex print:flex screen:drop-shadow-lg bg-paper"
+        className="page:w-[8.5in] print:w-[8.5in] page:h-[11in] print:h-[11in] p-8 sm:p-16 flex-col page:flex print:flex screen:drop-shadow-lg bg-paper page:pb-12"
       >
         <header>
           <div className="sm:flex flex-row">
@@ -54,9 +54,9 @@ function App() {
         </header>
         <main
           id="body"
-          className="sm:grid grid-cols-9 gap-6 auto-rows-min flex-1"
+          className="sm:grid grid-cols-5 gap-x-5 auto-rows-min flex-1"
         >
-          <div id="col-left" className="col-span-6">
+          <div id="col-left" className="col-span-3">
             <Section id="work" title="Work Experience">
               {resumeJson.work!.map((position) => (
                 <WorkBlock
@@ -65,16 +65,8 @@ function App() {
                 />
               ))}
             </Section>
-            <Section id="volunteer" title="Community Leadership">
-              {resumeJson.volunteer!.map((position) => (
-                <VolunteerBlock
-                  key={`position-${position.organization}-${position.position}`}
-                  position={position}
-                />
-              ))}
-            </Section>
           </div>
-          <div id="col-right" className="col-span-3">
+          <div id="col-right" className="col-span-2">
             <Section id="skills" title="Skills">
               {Object.entries(groupedSkills).map(([keyword, skills], i) => (
                 <SkillsBlock
@@ -92,20 +84,30 @@ function App() {
                 />
               ))}
             </Section>
+            <Section id="volunteer" title="Community Leadership">
+              {resumeJson.volunteer!.map((position) => (
+                <VolunteerBlock
+                  key={`position-${position.organization}-${position.position}`}
+                  position={position}
+                />
+              ))}
+            </Section>
           </div>
         </main>
-        <footer className="py-4 mt-4 sm:mt-0 page:py-0 print:py-0 sm:flex flex-row items-end text-xs text-center">
-          <div className="flex-1 page:text-left print:text-left">
+        <footer className="py-4 mt-4 sm:mt-0 page:py-0 print:py-0 sm:flex flex-row items-end text-xs text-center text-gray-500">
+          <div className="flex-1 ">
             <p>
               <Balancer>
-                This resume is a printable web app built using React, Vite, and
-                Tailwind.
+                Pssst. This isn't just a resume — it's a printable web app built
+                with React, Vite, and Tailwind. See it live at{" "}
+                <a
+                  className="hover:text-accent"
+                  href="https://resume.jordanloeser.com"
+                >
+                  resume.jordanloeser.com
+                </a>
+                .
               </Balancer>
-            </p>
-            <p>
-              <a href="https://resume.jordanloeser.com">
-                resume.jordanloeser.com
-              </a>
             </p>
           </div>
         </footer>
