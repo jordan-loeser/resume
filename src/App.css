@@ -8,6 +8,10 @@
   border: 1px dashed red;
 }
 
+.debug article {
+  border: 1px dashed green;
+}
+
 @media print {
   @page {
     size: 8.5in 11in;

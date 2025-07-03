@@ -3,9 +3,9 @@ import Balancer from "react-wrap-balancer";
 type ContentBlockProps = {
   title?: string;
   subtitle?: string;
-  subtitle2?: string;
   body?: string;
   smallBody?: string;
+  bullets?: string[];
   useBalancer?: boolean;
 };
 
@@ -22,46 +22,56 @@ const ConditionalBalancer = ({
 export const ContentBlock = ({
   title,
   subtitle,
-  subtitle2,
   body,
   smallBody,
+  bullets,
   useBalancer = true,
 }: ContentBlockProps) => (
-  <div className="mb-2">
-    <hgroup className="mb-1">
+  <article className="space-y-1">
+    <hgroup className="text-sm font-semibold leading-tight">
       {title && (
-        <h4 className="text-sm font-bold">
+        <h4>
           <ConditionalBalancer balance={useBalancer}>
             {title}
           </ConditionalBalancer>
         </h4>
       )}
       {subtitle && (
-        <h5 className="text-sm">
+        <h5 className="text-gray-700 font-medium">
           <ConditionalBalancer balance={useBalancer}>
             {subtitle}
           </ConditionalBalancer>
         </h5>
       )}
-      {subtitle2 && (
-        <h6 className="text-sm">
-          <ConditionalBalancer balance={useBalancer}>
-            {subtitle2}
-          </ConditionalBalancer>
-        </h6>
-      )}
     </hgroup>
-    {body && (
-      <p className="text-sm font-light">
-        <ConditionalBalancer balance={useBalancer}>{body}</ConditionalBalancer>
-      </p>
+    {(body || smallBody) && (
+      <div className="font-light leading-snug">
+        {body && (
+          <p className="text-sm">
+            <ConditionalBalancer balance={useBalancer}>
+              {body}
+            </ConditionalBalancer>
+          </p>
+        )}
+        {smallBody && (
+          <p className="text-xs text-gray-600">
+            <ConditionalBalancer balance={useBalancer}>
+              {smallBody}
+            </ConditionalBalancer>
+          </p>
+        )}
+      </div>
     )}
-    {smallBody && (
-      <p className="text-xs font-light">
-        <ConditionalBalancer balance={useBalancer}>
-          {smallBody}
-        </ConditionalBalancer>
-      </p>
+    {bullets && bullets.length > 0 && (
+      <ul className="list-[square] pl-4 text-sm font-light leading-snug space-y-1 text-gray-600 pb-1">
+        {bullets?.map((bullet) => (
+          <li key={bullet}>
+            <ConditionalBalancer balance={useBalancer}>
+              {bullet}
+            </ConditionalBalancer>
+          </li>
+        ))}
+      </ul>
     )}
-  </div>
+  </article>
 );

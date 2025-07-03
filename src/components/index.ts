@@ -1,4 +1,3 @@
 export { ContentBlock } from "./ContentBlock";
-export { GroupedContentWithTitle } from "../features/GroupedContentWithTitle";
-export { SectionHeader } from "./SectionHeader";
+export { Section } from "./Section";
 export { Button } from "./Button";
