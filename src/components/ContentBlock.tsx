@@ -37,7 +37,7 @@ export const ContentBlock = ({
         </h4>
       )}
       {subtitle && (
-        <h5 className="text-gray-700 font-medium">
+        <h5 className="font-medium text-gray-700">
           <ConditionalBalancer balance={useBalancer}>
             {subtitle}
           </ConditionalBalancer>
@@ -63,7 +63,7 @@ export const ContentBlock = ({
       </div>
     )}
     {bullets && bullets.length > 0 && (
-      <ul className="list-[square] pl-4 text-sm font-light leading-snug space-y-1 text-gray-600 pb-1">
+      <ul className="list-[square] space-y-1 pb-1 pl-4 text-sm font-light leading-snug text-gray-600">
         {bullets?.map((bullet) => (
           <li key={bullet}>
             <ConditionalBalancer balance={useBalancer}>
