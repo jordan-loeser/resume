@@ -3,7 +3,7 @@ import { Iso8601 } from "@kurone-kito/jsonresume-types";
 type Options = { showMonth?: boolean };
 
 const getDateTimeFormatOptions = (
-  options: Options
+  options: Options,
 ): Intl.DateTimeFormatOptions => ({
   year: "numeric",
   month: options?.showMonth ? "short" : undefined,
@@ -11,19 +11,19 @@ const getDateTimeFormatOptions = (
 
 export const parseStartDate = (
   date: Iso8601 | undefined,
-  options: Options = {}
+  options: Options = {},
 ): string => {
   if (!date) return "";
   const startDate = new Date(date);
   return startDate.toLocaleDateString(
     "en-US",
-    getDateTimeFormatOptions(options)
+    getDateTimeFormatOptions(options),
   );
 };
 
 export const parseEndDate = (
   date: Iso8601 | undefined,
-  options: Options = {}
+  options: Options = {},
 ): string => {
   if (!date) return "Present";
   const endDate = new Date(date);
@@ -33,7 +33,7 @@ export const parseEndDate = (
 export const parseDateRange = (
   startDate: Iso8601 | undefined,
   endDate: Iso8601 | undefined,
-  options: Options = {}
+  options: Options = {},
 ): string => {
   const parsedStart = parseStartDate(startDate, options);
   const parsedEnd = parseEndDate(endDate, options);

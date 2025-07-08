@@ -6,7 +6,7 @@
 
 export function groupConsecutivePositionsByKey<T>(
   positions: T[],
-  key: keyof T
+  key: keyof T,
 ): Array<T[]> {
   if (positions.length <= 0) return [];
 

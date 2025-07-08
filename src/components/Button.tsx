@@ -10,7 +10,7 @@ export const Button = ({ icon, description, onClick }: ButtonProps) => (
   <button
     onClick={onClick}
     type="button"
-    className="bg-accent text-white border border-accent hover:bg-white hover:text-accent focus:ring-4 focus:outline-none font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2"
+    className="me-2 inline-flex items-center rounded-lg border border-accent bg-accent fill-white p-2.5 text-center text-sm font-medium text-white hover:bg-white hover:fill-accent hover:text-accent focus:outline-none focus:ring-4"
     title={description}
   >
     {icon}
